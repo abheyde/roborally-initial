@@ -234,11 +234,19 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void moveForward(@NotNull Player player) {
-        Space current = player.getSpace();
-        if (current != null);{
-            Space target = board.getNeighbour(current, player.getHeading());
-            if (target != null && target.getPlayer() == null) ;{
-                player.setSpace(target);
+        if (player.board == board) {
+            Space space = player.getSpace();
+            Heading heading = player.getHeading();
+
+            Space target = board.getNeighbour(space, heading);
+            if (target != null) {
+                try {
+                    moveToSpace(player, target, heading);
+                } catch (ImpossibleMoveException e) {
+                    // we don't do anything here  for now; we just catch the
+                    // exception so that we do no pass it on to the caller
+                    // (which would be very bad style).
+                }
             }
         }
     }
@@ -277,6 +285,44 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
             return false;
         }
     }
+    void moveToSpace(@NotNull Player player, @NotNull Space space, @NotNull Heading heading) throws ImpossibleMoveException {
+        assert board.getNeighbour(player.getSpace(), heading) == space; // make sure the move to here is possible in principle
+        Player other = space.getPlayer();
+        if (other != null){
+            Space target = board.getNeighbour(space, heading);
+            if (target != null) {
+                // XXX Note that there might be additional problems with
+                //     infinite recursion here (in some special cases)!
+                //     We will come back to that!
+                moveToSpace(other, target, heading);
+
+                // Note that we do NOT embed the above statement in a try catch block, since
+                // the thrown exception is supposed to be passed on to the caller
+
+                assert target.getPlayer() == null : target; // make sure target is free now
+            } else {
+                throw new ImpossibleMoveException(player, space, heading);
+            }
+        }
+        player.setSpace(space);
+    }
+
+    class ImpossibleMoveException extends Exception {
+
+        private Player player;
+        private Space space;
+        private Heading heading;
+
+        public ImpossibleMoveException(Player player, Space space, Heading heading) {
+            super("Move impossible");
+            this.player = player;
+            this.space = space;
+            this.heading = heading;
+        }
+    }
+
+
+
 
     /**
      * A method called when no corresponding controller operation is implemented yet. This
