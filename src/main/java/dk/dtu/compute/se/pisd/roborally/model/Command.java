@@ -39,6 +39,9 @@ public enum Command {
     RIGHT("Turn Right"),
     LEFT("Turn Left"),
     FAST_FORWARD("Fast Fwd"),
+    SUPER_FAST_FORWARD("Super Fwd"),
+    TURN_180("Turn 180"),
+    TURN_180_FORWARD("180 Fwd"),
 
     // XXX Assignment V3
     OPTION_LEFT_RIGHT("Left OR Right", LEFT, RIGHT);

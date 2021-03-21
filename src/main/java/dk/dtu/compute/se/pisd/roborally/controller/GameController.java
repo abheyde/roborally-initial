@@ -226,6 +226,15 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
                 case FAST_FORWARD:
                     this.fastForward(player);
                     break;
+                case SUPER_FAST_FORWARD:
+                    this.superfastForward(player);
+                    break;
+                case TURN_180:
+                    this.turn180(player);
+                    break;
+                case TURN_180_FORWARD:
+                    this.turn180Forward(player);
+                    break;
                 default:
                     // DO NOTHING (for now)
             }
@@ -256,6 +265,22 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
          moveForward(player);
          moveForward(player);
 
+    }
+
+    public void superfastForward(@NotNull Player player) {
+        moveForward(player);
+        moveForward(player);
+        moveForward(player);
+    }
+
+    public void turn180(@NotNull Player player) {
+        turnRight(player);
+        turnRight(player);
+    }
+
+    public void turn180Forward(@NotNull Player player) {
+        turn180(player);
+        moveForward(player);
     }
 
     // TODO Assignment V2
