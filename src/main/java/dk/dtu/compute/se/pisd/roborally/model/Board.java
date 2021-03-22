@@ -179,6 +179,8 @@ public class Board extends Subject {
      * @param heading the heading of the neighbour
      * @return the space in the given direction; null if there is no (reachable) neighbour
      */
+
+    // Assignment A3
     public Space getNeighbour(@NotNull Space space, @NotNull Heading heading) {
         if (space.getWalls().contains(heading)) {
             return null;

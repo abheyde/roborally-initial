@@ -267,17 +267,20 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     }
 
+    // Assignment A3
     public void superfastForward(@NotNull Player player) {
         moveForward(player);
         moveForward(player);
         moveForward(player);
     }
 
+    // Assignment A3
     public void turn180(@NotNull Player player) {
         turnRight(player);
         turnRight(player);
     }
 
+    // Assigment A3
     public void turn180Forward(@NotNull Player player) {
         turn180(player);
         moveForward(player);
