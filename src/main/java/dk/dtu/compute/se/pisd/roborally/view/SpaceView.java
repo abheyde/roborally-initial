@@ -31,6 +31,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -93,6 +94,16 @@ public class SpaceView extends StackPane implements ViewObserver {
             arrow.setRotate((90 * player.getHeading().ordinal()) % 360);
             this.getChildren().add(arrow);
         }
+        // Is making the walls, but still needs more work to be done with this.
+        // Canvas canvas = new Canvas(SPACE_HEIGHT, SPACE_HEIGHT);
+
+        // GraphicsContext gc = canvas.getGraphicsContext2D();
+        // gc.setStroke(Color.RED);
+        // gc.setLineWidth(5);
+        // gc.setLineCap(StrokeLineCap.ROUND);
+
+        // gc.strokeLine(SPACE_HEIGHT-2,2,0,0);
+        // this.getChildren().add(canvas);
     }
 
     @Override
@@ -101,5 +112,4 @@ public class SpaceView extends StackPane implements ViewObserver {
             updatePlayer();
         }
     }
-
 }
