@@ -39,6 +39,8 @@ public enum Command {
     RIGHT("Turn Right"),
     LEFT("Turn Left"),
     FAST_FORWARD("Fast Fwd"),
+
+    // XXX Assignment A3
     SUPER_FAST_FORWARD("Super Fwd"),
     TURN_180("Turn 180"),
     TURN_180_FORWARD("180 Fwd"),

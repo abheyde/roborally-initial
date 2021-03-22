@@ -310,6 +310,8 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
             return false;
         }
     }
+
+    // XXX Assignment A3
     void moveToSpace(@NotNull Player player, @NotNull Space space, @NotNull Heading heading) throws ImpossibleMoveException {
         assert board.getNeighbour(player.getSpace(), heading) == space; // make sure the move to here is possible in principle
         Player other = space.getPlayer();
@@ -331,7 +333,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
         }
         player.setSpace(space);
     }
-
+    // Assignment A3
     class ImpossibleMoveException extends Exception {
 
         private Player player;
@@ -343,6 +345,8 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
             this.player = player;
             this.space = space;
             this.heading = heading;
+
+            // Checks if the move is possible
         }
     }
 
