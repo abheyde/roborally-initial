@@ -264,7 +264,6 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
     public void fastForward(@NotNull Player player) {
          moveForward(player);
          moveForward(player);
-
     }
 
     // Assignment A3
