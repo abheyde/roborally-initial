@@ -23,6 +23,8 @@ package dk.dtu.compute.se.pisd.roborally.model;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
+import dk.dtu.compute.se.pisd.roborally.view.SpaceView;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,8 +78,11 @@ public class Space extends Subject {
         return walls;
     }
 
-    public void setWalls(){
-
+    public void setWalls(Heading heading){
+        if ( ! walls.contains(heading)) {
+            walls.add(heading);
+            notifyChange();
+        }
     }
 
     public List<FieldAction> getActions() {
