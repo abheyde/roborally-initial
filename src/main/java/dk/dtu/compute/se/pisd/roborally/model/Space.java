@@ -38,7 +38,7 @@ public class Space extends Subject {
     private Player player;
 
     private List<Heading> walls = new ArrayList<>();
-    private List<FieldAction> actions = new ArrayList<>();
+    public List<FieldAction> actions = new ArrayList<>();
 
     public final Board board;
 
@@ -85,6 +85,40 @@ public class Space extends Subject {
         // also need to update when some player attributes change, the player can
         // notify the space of these changes by calling this method.
         notifyChange();
+    }
+    public Space getNeighbourSpace(Heading heading){
+        int newX, newY;
+        switch (heading) {
+
+            case NORTH:
+                newX = x;
+                newY = (y - 1) % board.height;
+
+                if (newY == -1)
+                    newY = 7;
+
+                break;
+            case SOUTH:
+                newX = x;
+                newY = (y + 1) % board.height;
+                break;
+            case WEST:
+                newX = (x - 1) % board.width;
+
+                if (newX == -1)
+                    newX = 7;
+
+                newY = y;
+                break;
+            case EAST:
+                newX = (x + 1) % board.width;
+                newY = y;
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + heading);
+        }
+        return this.board.getSpace(newX, newY);
     }
 
 }
