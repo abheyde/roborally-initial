@@ -22,6 +22,7 @@
 package dk.dtu.compute.se.pisd.roborally.model;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
+import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 
 import java.util.ArrayList;
@@ -121,4 +122,17 @@ public class Space extends Subject {
         return this.board.getSpace(newX, newY);
     }
 
+    public ConveyorBelt getConveyorBelt() {
+
+        ConveyorBelt belt = null;
+
+        for (FieldAction action : this.actions) {
+            if (action instanceof ConveyorBelt && belt == null) {
+                belt = (ConveyorBelt) action;
+            }
+        }
+
+        return belt;
+
+    }
 }
