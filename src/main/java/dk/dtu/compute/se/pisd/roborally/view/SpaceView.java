@@ -99,16 +99,38 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     public void updateWalls(){
-        if (space.x == 5 && space.y == 5){
-            Canvas canvas = new Canvas(SPACE_HEIGHT, SPACE_HEIGHT);
+        Space space = this.space;
+        if (space != null && !space.getWalls().isEmpty()) {
+            for (Heading wall : space.getWalls()) {
 
-            GraphicsContext gc = canvas.getGraphicsContext2D();
-            gc.setStroke(Color.RED);
-            gc.setLineWidth(5);
-            gc.setLineCap(StrokeLineCap.ROUND);
+                Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
+                GraphicsContext gc = canvas.getGraphicsContext2D();
 
-            gc.strokeLine(SPACE_HEIGHT-2,2,2,2);
-            this.getChildren().add(canvas);
+                switch(wall) {
+                    case SOUTH:
+                        gc.strokeLine(SPACE_HEIGHT - 2, 2, 2, 2);
+                        break;
+
+                    case WEST:
+                        gc.strokeLine( 2, SPACE_HEIGHT-2, 2, 2);
+                        break;
+
+                    case NORTH:
+                        gc.strokeLine(2,2,SPACE_HEIGHT-2,2);
+                        break;
+
+                    case EAST:
+                        gc.strokeLine(2,2,2,SPACE_HEIGHT-2);
+                        break;
+                }
+
+                gc.setStroke(Color.RED);
+                gc.setLineWidth(5);
+                gc.setLineCap(StrokeLineCap.ROUND);
+                this.getChildren().add(canvas);
+
+            }
+
         }
     }
 
