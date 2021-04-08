@@ -100,7 +100,7 @@ public class SpaceView extends StackPane implements ViewObserver {
 
     public void updateWalls(){
         if (space.x == 5 && space.y == 5){
-            Canvas canvas = new Canvas(SPACE_HEIGHT, SPACE_HEIGHT);
+            Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
 
             GraphicsContext gc = canvas.getGraphicsContext2D();
             gc.setStroke(Color.RED);

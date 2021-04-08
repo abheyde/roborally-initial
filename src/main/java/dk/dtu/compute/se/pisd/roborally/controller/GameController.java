@@ -150,63 +150,56 @@ public class GameController {
     // XXX: V2
     private void executeNextStep() {
         Player currentPlayer = board.getCurrentPlayer();
-        if (board.getPhase() == Phase.ACTIVATION && currentPlayer != null) {
+        if ((board.getPhase() == Phase.ACTIVATION || (board.getPhase() == Phase.PLAYER_INTERACTION && board.getUserChoice() != null))
+                && currentPlayer != null) {
             int step = board.getStep();
             if (step >= 0 && step < Player.NO_REGISTERS) {
-                CommandCard card = currentPlayer.getProgramField(step).getCard();
-                if (card != null) {
-                    Command command = card.command;
-                    if(command.isInteractive()){
-                        board.setPhase(Phase.PLAYER_INTERACTION);
-                        return;
-                    }
-                    executeCommand(currentPlayer, command);
-                }
-                int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
-                if (nextPlayerNumber < board.getPlayersNumber()) {
-                    board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
+                Command userChoice = board.getUserChoice();
+                if (userChoice != null) {
+                    board.setUserChoice(null);
+                    board.setPhase(Phase.ACTIVATION);
+                    executeCommand(currentPlayer, userChoice);
                 } else {
-                    step++;
-                    if (step < Player.NO_REGISTERS) {
-                        makeProgramFieldsVisible(step);
-                        board.setStep(step);
-                        board.setCurrentPlayer(board.getPlayer(0));
-                    } else {
-                        startProgrammingPhase();
+                    CommandCard card = currentPlayer.getProgramField(step).getCard();
+                    if (card != null) {
+                        Command command = card.command;
+                        if (command.isInteractive()) {
+                            board.setPhase(Phase.PLAYER_INTERACTION);
+                            return;
+                        }
+                        executeCommand(currentPlayer, command);
                     }
+                }
+                    int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
+                    if (nextPlayerNumber < board.getPlayersNumber()) {
+                        board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
+                    } else {
+                        step++;
+                        if (step < Player.NO_REGISTERS) {
+                            makeProgramFieldsVisible(step);
+                            board.setStep(step);
+                            board.setCurrentPlayer(board.getPlayer(0));
+                        } else {
+                            startProgrammingPhase();
+                        }
+                    }
+                } else{
+                    // this should not happen
+                    assert false;
                 }
             } else {
                 // this should not happen
                 assert false;
             }
-        } else {
-            // this should not happen
-            assert false;
         }
-    }
 
 public void executeCommandOptionAndContinue(@NotNull Command option) {
-    Player currentPlayer = board.getCurrentPlayer();
-    if (currentPlayer != null && board.getPhase() == Phase.PLAYER_INTERACTION && option != null) {
-        board.setPhase(Phase.ACTIVATION);
-        executeCommand(currentPlayer, option);
-
-        int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
-        if (nextPlayerNumber < board.getPlayersNumber()) {
-            board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
-        } else {
-            int step = board.getStep() + 1;
-            if (step < Player.NO_REGISTERS) {
-                makeProgramFieldsVisible(step);
-                board.setStep(step);
-                board.setCurrentPlayer(board.getPlayer(0));
-            } else {
-                startProgrammingPhase();
-            }
-        }
-    }
+        assert board.getPhase() == Phase.PLAYER_INTERACTION;
+        assert board.getCurrentPlayer() != null;
+        board.setUserChoice(option);
+        continuePrograms();
 }
-    // XXX: V2
+
     private void executeCommand(@NotNull Player player, Command command) {
         if (player != null && player.board == board && command != null) {
             // XXX This is a very simplistic way of dealing with some basic cards and
@@ -317,7 +310,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
     void moveToSpace(@NotNull Player player, @NotNull Space space, @NotNull Heading heading) throws ImpossibleMoveException {
         assert board.getNeighbour(player.getSpace(), heading) == space; // make sure the move to here is possible in principle
         Player other = space.getPlayer();
-        if (other != null){
+        if (other != null) {
             Space target = board.getNeighbour(space, heading);
             if (target != null) {
                 // XXX Note that there might be additional problems with
@@ -328,7 +321,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
                 // Note that we do NOT embed the above statement in a try catch block, since
                 // the thrown exception is supposed to be passed on to the caller
 
-                assert target.getPlayer() == null : target; // make sure target is free now
+                assert space.getPlayer() == null : "Space to move to is not free" + space; // make sure target is free now
             } else {
                 throw new ImpossibleMoveException(player, space, heading);
             }
@@ -351,9 +344,6 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
             // Checks if the move is possible
         }
     }
-
-
-
 
     /**
      * A method called when no corresponding controller operation is implemented yet. This
