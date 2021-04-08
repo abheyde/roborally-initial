@@ -67,6 +67,8 @@ public class SpaceView extends StackPane implements ViewObserver {
         this.setMinHeight(SPACE_HEIGHT);
         this.setMaxHeight(SPACE_HEIGHT);
 
+
+
         if ((space.x + space.y) % 2 == 0) {
             this.setStyle("-fx-background-color: white;");
         } else {
@@ -96,16 +98,20 @@ public class SpaceView extends StackPane implements ViewObserver {
             arrow.setRotate((90 * player.getHeading().ordinal()) % 360);
             this.getChildren().add(arrow);
         }
-        // Is making the walls, but still needs more work to be done with this.
-        // Canvas canvas = new Canvas(SPACE_HEIGHT, SPACE_HEIGHT);
+    }
 
-        // GraphicsContext gc = canvas.getGraphicsContext2D();
-        // gc.setStroke(Color.RED);
-        // gc.setLineWidth(5);
-        // gc.setLineCap(StrokeLineCap.ROUND);
+    public void updateWalls(){
+        if (space.x == 5 && space.y == 5){
+            Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
 
-        // gc.strokeLine(SPACE_HEIGHT-2,2,0,0);
-        // this.getChildren().add(canvas);
+            GraphicsContext gc = canvas.getGraphicsContext2D();
+            gc.setStroke(Color.RED);
+            gc.setLineWidth(5);
+            gc.setLineCap(StrokeLineCap.ROUND);
+
+            gc.strokeLine(SPACE_HEIGHT-2,2,2,2);
+            this.getChildren().add(canvas);
+        }
     }
 
     private void updateBelt() {
@@ -146,6 +152,7 @@ public class SpaceView extends StackPane implements ViewObserver {
             this.getChildren().clear();
             updatePlayer();
             updateBelt();
+            updateWalls();
         }
     }
 }
