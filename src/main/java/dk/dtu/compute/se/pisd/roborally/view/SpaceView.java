@@ -108,6 +108,21 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     private void updateBelt() {
+
+        ConveyorBelt belt = space.getConveyorBelt();
+        if (belt != null){
+            Polygon fig = new Polygon(0.0,0.0,60.0,0.0,30.0,60.0);
+
+            try {
+                fig.setFill(Color.LIGHTPINK);
+            } catch (Exception e) {
+                fig.setFill(Color.CHOCOLATE);
+            }
+
+            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
+            this.getChildren().add(fig);
+        }
+        /*
         ConveyorBelt belt = space.getConveyorBelt();
         if (belt != null) {
 
@@ -120,6 +135,7 @@ public class SpaceView extends StackPane implements ViewObserver {
             fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
             this.getChildren().add(fig);
         }
+         */
 
     }
 
@@ -127,6 +143,7 @@ public class SpaceView extends StackPane implements ViewObserver {
     @Override
     public void updateView(Subject subject) {
         if (subject == this.space) {
+            this.getChildren().clear();
             updatePlayer();
             updateBelt();
         }
