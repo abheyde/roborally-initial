@@ -48,11 +48,6 @@ public class ConveyorBelt extends FieldAction {
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {
         // TODO needs to be implemented
-<<<<<<< HEAD
-        return false;
-    }
-
-=======
         Player currentPlayer = space.getPlayer();
         Space neighbourSpace = space.getNeighbourSpace(this.heading);
 
@@ -72,10 +67,5 @@ public class ConveyorBelt extends FieldAction {
 
             return true;
         }
-
-
-
-
     }
->>>>>>> AddedFeatures
 }
