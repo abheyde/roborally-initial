@@ -68,7 +68,6 @@ public class SpaceView extends StackPane implements ViewObserver {
         this.setMaxHeight(SPACE_HEIGHT);
 
 
-
         if ((space.x + space.y) % 2 == 0) {
             this.setStyle("-fx-background-color: white;");
         } else {
@@ -100,8 +99,8 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
     }
 
-    public void updateWalls(){
-        if (space.x == 5 && space.y == 5){
+    public void updateWalls() {
+        if (space.x == 5 && space.y == 5) {
             Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
 
             GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -109,25 +108,21 @@ public class SpaceView extends StackPane implements ViewObserver {
             gc.setLineWidth(5);
             gc.setLineCap(StrokeLineCap.ROUND);
 
-            gc.strokeLine(SPACE_HEIGHT-2,2,2,2);
+            gc.strokeLine(SPACE_HEIGHT - 2, 2, 2, 2);
             this.getChildren().add(canvas);
         }
     }
 
     private void updateBelt() {
-        ConveyorBelt belt = space.getConveyorBelt();
-        if (belt != null){
-            Polygon fig = new Polygon(0.0,0.0,60.0,0.0,30.0,60.0);
+            ConveyorBelt belt = space.getConveyorBelt();
+            if (belt != null) {
+                Polygon fig = new Polygon(0.0, 0.0, 60.0, 0.0, 30.0, 60.0);
 
-            try {
-                fig.setFill(Color.LIGHTPINK);
-            } catch (Exception e) {
-                fig.setFill(Color.CHOCOLATE);
+               fig.setFill(Color.LIGHTPINK);
+
+                fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
+                this.getChildren().add(fig);
             }
-
-            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
-            this.getChildren().add(fig);
-        }
         /*
         ConveyorBelt belt = space.getConveyorBelt();
         if (belt != null) {
@@ -143,16 +138,16 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
          */
 
-    }
+        }
 
 
-    @Override
-    public void updateView(Subject subject) {
-        if (subject == this.space) {
-            this.getChildren().clear();
-            updatePlayer();
-            updateBelt();
-            updateWalls();
+        @Override
+        public void updateView (Subject subject){
+            if (subject == this.space) {
+                this.getChildren().clear();
+                updatePlayer();
+                updateBelt();
+                updateWalls();
+            }
         }
     }
-}
