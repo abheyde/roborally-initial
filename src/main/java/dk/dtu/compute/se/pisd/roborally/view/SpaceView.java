@@ -22,6 +22,8 @@
 package dk.dtu.compute.se.pisd.roborally.view;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
+import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
+import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.model.Board;
 import dk.dtu.compute.se.pisd.roborally.model.Heading;
 import dk.dtu.compute.se.pisd.roborally.model.Player;
@@ -134,10 +136,44 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
     }
 
+    private void updateBelt() {
+        ConveyorBelt belt = space.getConveyorBelt();
+        if (belt != null){
+            Polygon fig = new Polygon(0.0,0.0,60.0,0.0,30.0,60.0);
+
+            try {
+                fig.setFill(Color.LIGHTPINK);
+            } catch (Exception e) {
+                fig.setFill(Color.CHOCOLATE);
+            }
+
+            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
+            this.getChildren().add(fig);
+        }
+        /*
+        ConveyorBelt belt = space.getConveyorBelt();
+        if (belt != null) {
+
+            Polygon fig = new Polygon(0.0, 0.0,
+                    60.0, 0.0,
+                    30.0, 60.0);
+
+            fig.setFill(Color.LIGHTGRAY);
+
+            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
+            this.getChildren().add(fig);
+        }
+         */
+
+    }
+
+
     @Override
     public void updateView(Subject subject) {
         if (subject == this.space) {
+            this.getChildren().clear();
             updatePlayer();
+            updateBelt();
             updateWalls();
         }
     }
