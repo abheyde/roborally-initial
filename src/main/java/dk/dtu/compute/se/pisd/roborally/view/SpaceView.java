@@ -107,6 +107,10 @@ public class SpaceView extends StackPane implements ViewObserver {
 
                 Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
                 GraphicsContext gc = canvas.getGraphicsContext2D();
+                gc.setStroke(Color.RED);
+                gc.setLineWidth(5);
+                gc.setLineCap(StrokeLineCap.ROUND);
+                this.getChildren().add(canvas);
 
                 switch(wall) {
                     case SOUTH:
@@ -125,12 +129,6 @@ public class SpaceView extends StackPane implements ViewObserver {
                         gc.strokeLine(2,2,2,SPACE_HEIGHT-2);
                         break;
                 }
-
-                gc.setStroke(Color.RED);
-                gc.setLineWidth(5);
-                gc.setLineCap(StrokeLineCap.ROUND);
-                this.getChildren().add(canvas);
-
             }
 
         }
