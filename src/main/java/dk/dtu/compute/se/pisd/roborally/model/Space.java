@@ -91,12 +91,6 @@ public class Space extends Subject {
         return actions;
     }
 
-    void playerChanged() {
-        // This is a minor hack; since some views that are registered with the space
-        // also need to update when some player attributes change, the player can
-        // notify the space of these changes by calling this method.
-        notifyChange();
-    }
     public Space getNeighbourSpace(Heading heading){
         int newX, newY;
         switch (heading) {
@@ -144,5 +138,12 @@ public class Space extends Subject {
 
         return belt;
 
+    }
+
+    void playerChanged() {
+        // This is a minor hack; since some views that are registered with the space
+        // also need to update when some player attributes change, the player can
+        // notify the space of these changes by calling this method.
+        notifyChange();
     }
 }

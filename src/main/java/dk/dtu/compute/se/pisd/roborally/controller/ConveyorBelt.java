@@ -44,7 +44,6 @@ public class ConveyorBelt extends FieldAction {
     public void setHeading(Heading heading) {
         this.heading = heading;
     }
-
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {
         // TODO needs to be implemented
