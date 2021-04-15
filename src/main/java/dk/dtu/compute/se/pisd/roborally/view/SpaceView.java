@@ -24,10 +24,7 @@ package dk.dtu.compute.se.pisd.roborally.view;
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
 import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
-import dk.dtu.compute.se.pisd.roborally.model.Board;
-import dk.dtu.compute.se.pisd.roborally.model.Heading;
-import dk.dtu.compute.se.pisd.roborally.model.Player;
-import dk.dtu.compute.se.pisd.roborally.model.Space;
+import dk.dtu.compute.se.pisd.roborally.model.*;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
@@ -114,7 +111,7 @@ public class SpaceView extends StackPane implements ViewObserver {
 
                 switch(wall) {
                     case SOUTH:
-                        gc.strokeLine(SPACE_HEIGHT - 2, 2, 2, 2);
+                        gc.strokeLine(SPACE_HEIGHT-2, 73, 0, 73);
                         break;
 
                     case WEST:
@@ -126,7 +123,7 @@ public class SpaceView extends StackPane implements ViewObserver {
                         break;
 
                     case EAST:
-                        gc.strokeLine(2,2,2,SPACE_HEIGHT-2);
+                        gc.strokeLine(73,0,73,SPACE_HEIGHT-2);
                         break;
                 }
             }
@@ -164,7 +161,22 @@ public class SpaceView extends StackPane implements ViewObserver {
          */
 
     }
+private void updateGears() {
+    for (FieldAction action : space.actions) {
+        if (action instanceof Gear) {
 
+            Polygon fig1 = new Polygon(0.0, 0.0, 5.0, 0.0, 5.0, 5.0);
+
+            try {
+                fig1.setFill(Color.GREY);
+            } catch (Exception e) {
+                fig1.setFill(Color.GREENYELLOW);
+            }
+
+            this.getChildren().add(fig1);
+        }
+    }
+}
 
     @Override
     public void updateView(Subject subject) {
@@ -173,6 +185,7 @@ public class SpaceView extends StackPane implements ViewObserver {
             updatePlayer();
             updateBelt();
             updateWalls();
+            updateGears();
         }
     }
 }

@@ -77,6 +77,7 @@ public class Space extends Subject {
     }
 
     public List<Heading> getWalls() {
+
         return walls;
     }
 
@@ -88,6 +89,7 @@ public class Space extends Subject {
     }
 
     public List<FieldAction> getActions() {
+
         return actions;
     }
 
@@ -137,7 +139,6 @@ public class Space extends Subject {
         }
 
         return belt;
-
     }
 
     void playerChanged() {
