@@ -3,6 +3,14 @@ package dk.dtu.compute.se.pisd.roborally.model;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.controller.GameController;
 
+
+/**
+ * ...
+ *
+ * @author @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ *
+ */
+
 public class Gear extends FieldAction {
     public Direction direction;
 

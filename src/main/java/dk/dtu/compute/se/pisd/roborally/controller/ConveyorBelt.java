@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Krone
  */
 public class ConveyorBelt extends FieldAction {
 

@@ -28,7 +28,8 @@ import org.jetbrains.annotations.NotNull;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
  */
 public class GameController {
 
@@ -38,13 +39,13 @@ public class GameController {
         this.board = board;
     }
 
-    /**
-     * This is just some dummy controller operation to make a simple move to see something
-     * happening on the board. This method should eventually be deleted!
-     *
-     * @param space the space to which the current player should move
-     */
-    public void moveCurrentPlayerToSpace(@NotNull Space space)  {
+//    /**
+//     * This is just some dummy controller operation to make a simple move to see something
+//     * happening on the board. This method should eventually be deleted!
+//     *
+//     * @param space the space to which the current player should move
+//     */
+//    public void moveCurrentPlayerToSpace(@NotNull Space space)  {
         // TODO Assignment V1: method should be implemented by the students:
         //   - the current player should be moved to the given space
         //     (if it is free()
@@ -52,20 +53,20 @@ public class GameController {
         //     following the current player
         //   - the counter of moves in the game should be increased by one
         //     if the player is moved
-
-        Player current = board.getCurrentPlayer();
-
-        if(space.getPlayer() == null)
-            current.setSpace(space);
-        else return;
-
-        int number = board.getPlayerNumber(current);
-        board.setCurrentPlayer(board.getPlayer(number + 1));
-        Player next = board.getPlayer((number + 1) % board.getPlayersNumber());
-        board.setCurrentPlayer(next);
-
-        board.setCounter(board.getCounter() + 1);
-    }
+//
+//        Player current = board.getCurrentPlayer();
+//
+//        if(space.getPlayer() == null)
+//            current.setSpace(space);
+//        else return;
+//
+//        int number = board.getPlayerNumber(current);
+//        board.setCurrentPlayer(board.getPlayer(number + 1));
+//        Player next = board.getPlayer((number + 1) % board.getPlayersNumber());
+//        board.setCurrentPlayer(next);
+//
+//        board.setCounter(board.getCounter() + 1);
+//    }
 
     // XXX: V2
     public void startProgrammingPhase() {
