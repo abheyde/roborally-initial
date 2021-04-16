@@ -77,8 +77,7 @@ public class AppController implements Observer {
                 }
             }
 
-            // XXX the board should eventually be created programmatically or loaded from a file
-            //     here we just create an empty board with the required number of players.
+            // This creates a new game, with a specific board
             Board board = LoadBoard.loadBoard("board2");
             gameController = new GameController(board);
             int no = result.get();
@@ -95,7 +94,7 @@ public class AppController implements Observer {
             roboRally.createBoardView(gameController);
         }
     }
-
+//Mangler @
     public void saveGame() {
         // XXX needs to be implemented eventually
     }

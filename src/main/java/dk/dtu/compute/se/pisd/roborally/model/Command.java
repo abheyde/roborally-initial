@@ -29,7 +29,7 @@ import java.util.List;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Alexander Bak Heyde, s193576@student.dtu.dk
  */
 public enum Command {
 

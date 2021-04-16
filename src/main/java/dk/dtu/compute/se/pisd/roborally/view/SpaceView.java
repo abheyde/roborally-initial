@@ -42,7 +42,8 @@ import org.w3c.dom.css.Rect;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Alexander Bak Heyde, s3576@student.dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
  */
 public class SpaceView extends StackPane implements ViewObserver {
 

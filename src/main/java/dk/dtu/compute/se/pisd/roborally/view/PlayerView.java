@@ -36,7 +36,8 @@ import org.jetbrains.annotations.NotNull;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Alexander Bak Heyde, s193576@student.dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
  */
 public class PlayerView extends Tab implements ViewObserver {
 
