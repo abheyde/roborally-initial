@@ -22,6 +22,7 @@ public class Gear extends FieldAction {
 
             case RIGHT:
                 gameController.turnRight(player);
+                break;
         }
         return true;
     }
