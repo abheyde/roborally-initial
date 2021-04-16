@@ -25,6 +25,8 @@ import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
 import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.view.SpaceView;
+import dk.dtu.compute.se.pisd.roborally.view.SpaceView;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +35,7 @@ import java.util.List;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Andreas Krone,
  */
 public class Space extends Subject {
 
@@ -75,26 +77,22 @@ public class Space extends Subject {
     }
 
     public List<Heading> getWalls() {
+
         return walls;
     }
 
     public void setWalls(Heading heading){
-        if (! walls.contains(heading)){
+        if ( ! walls.contains(heading)) {
             walls.add(heading);
             notifyChange();
         }
     }
 
     public List<FieldAction> getActions() {
+
         return actions;
     }
 
-    void playerChanged() {
-        // This is a minor hack; since some views that are registered with the space
-        // also need to update when some player attributes change, the player can
-        // notify the space of these changes by calling this method.
-        notifyChange();
-    }
     public Space getNeighbourSpace(Heading heading){
         int newX, newY;
         switch (heading) {
@@ -141,6 +139,12 @@ public class Space extends Subject {
         }
 
         return belt;
+    }
 
+    void playerChanged() {
+        // This is a minor hack; since some views that are registered with the space
+        // also need to update when some player attributes change, the player can
+        // notify the space of these changes by calling this method.
+        notifyChange();
     }
 }
