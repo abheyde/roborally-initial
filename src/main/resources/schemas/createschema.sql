@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS Game (
   phase tinyint,
   step tinyint,
   currentPlayer tinyint NULL,
+    boardName varchar(255),
 
   PRIMARY KEY (gameID),
   FOREIGN KEY (gameID, currentPlayer) REFERENCES Player(gameID, playerID)
@@ -29,21 +30,28 @@ CREATE TABLE IF NOT EXISTS Player (
   FOREIGN KEY (gameID) REFERENCES Game(gameID)
 );;
 
-CREATE TABLE IF NOT EXISTS CardField (
-                                         gameID int NOT NULL,
-                                         playerID tinyint NOT NULL,
-                                         type tinyint NOT NULL,
-                                         position tinyint NOT NULL,
+CREATE TABLE IF NOT EXISTS Cards (
+    gameID int NOT NULL,
+    playerID tinyint NOT NULL,
 
-                                         visible BIT NOT NULL,
-                                         command tinyint,
+    hand0 int,
+    hand1 int,
+    hand2 int,
+    hand3 int,
+    hand4 int,
+    hand5 int,
+    hand6 int,
+    hand7 int,
+    register0 int,
+    register1 int,
+    register2 int,
+    register3 int,
+    register4 int,
 
-                                         PRIMARY KEY (gameID, playerID, type, posistion),
-    FOREIGN KEY (gameID, REFERENCES Game(gameID)),
+    PRIMARY KEY (gameID, playerID),
+    FOREIGN KEY (gameID) REFERENCES Game(gameID),
     FOREIGN KEY (gameID, playerID) REFERENCES Player(gameID, playerID)
-    );
+    );;
 
 SET FOREIGN_KEY_CHECKS = 1;;
 
-
-// TODO still some stuff missing here
