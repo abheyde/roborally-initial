@@ -61,6 +61,23 @@ class Repository implements IRepository {
 
 	private static final String PLAYER_HEADING = "heading";
 
+	private static final String CARD_GAMEID = "gameID";
+	private static final String CARD_PLAYERID = "playerID";
+	private static final String CARD_HAND0 = "hand0";
+	private static final String CARD_HAND1 = "hand1";
+	private static final String CARD_HAND2 = "hand2";
+	private static final String CARD_HAND3 = "hand3";
+	private static final String CARD_HAND4 = "hand4";
+	private static final String CARD_HAND5 = "hand5";
+	private static final String CARD_HAND6 = "hand6";
+	private static final String CARD_HAND7 = "hand7";
+
+	private static final String CARD_REGISTER0 = "register0";
+	private static final String CARD_REGISTER1 = "register1";
+	private static final String CARD_REGISTER2 = "register2";
+	private static final String CARD_REGISTER3 = "register3";
+	private static final String CARD_REGISTER4 = "register4";
+
 	private Connector connector;
 	
 	Repository(Connector connector){
@@ -78,17 +95,21 @@ class Repository implements IRepository {
 				// TODO: the name should eventually set by the user
 				//       for the game and should be then used 
 				//       game.getName();
+				//ps.setNull(0, game.getGameId());
 				ps.setString(1, "Date: " +  new Date()); // instead of name
-				ps.setNull(2, Types.TINYINT); // game.getPlayerNumber(game.getCurrentPlayer())); is inserted after players!
+				ps.setInt(2, game.getPlayerNumber(game.getCurrentPlayer()));
 				ps.setInt(3, game.getPhase().ordinal());
 				ps.setInt(4, game.getStep());
+
+
+				//ps.setString(5, game.boardName);
 
 				// If you have a foreign key constraint for current players,
 				// the check would need to be temporarily disabled, since
 				// MySQL does not have a per transaction validation, but
 				// validates on a per row basis.
-				// Statement statement = connection.createStatement();
-				// statement.execute("SET foreign_key_checks = 0");
+				Statement statement = connection.createStatement();
+				statement.execute("SET foreign_key_checks = 0");
 				
 				int affectedRows = ps.executeUpdate();
 				ResultSet generatedKeys = ps.getGeneratedKeys();
@@ -98,14 +119,14 @@ class Repository implements IRepository {
 				generatedKeys.close();
 				
 				// Enable foreign key constraint check again:
-				// statement.execute("SET foreign_key_checks = 1");
-				// statement.close();
+				statement.execute("SET foreign_key_checks = 1");
+				statement.close();
 
 				createPlayersInDB(game);
 				/* TOODO this method needs to be implemented first
 				createCardFieldsInDB(game);
 				 */
-
+				createCardFieldsInDB(game);
 				// since current player is a foreign key, it can oly be
 				// inserted after the players are created, since MySQL does
 				// not have a per transaction validation, but validates on
@@ -167,6 +188,7 @@ class Repository implements IRepository {
 			rs.close();
 
 			updatePlayersInDB(game);
+			updateCardFieldsInDB(game);
 			/* TOODO this method needs to be implemented first
 			updateCardFieldsInDB(game);
 			*/
@@ -210,7 +232,7 @@ class Repository implements IRepository {
 				// game = new Board(width,height);
 				// TODO and we should also store the used game board in the database
 				//      for now, we use the default game board
-				game = LoadBoard.loadBoard("board1");
+				game = LoadBoard.loadBoard(rs.getString("name"));
 				if (game == null) {
 					return null;
 				}
@@ -237,7 +259,7 @@ class Repository implements IRepository {
 			/* TOODO this method needs to be implemented first
 			loadCardFieldsFromDB(game);
 			*/
-
+			loadCardFieldsFromDB(game);
 			return game;
 		} catch (SQLException e) {
 			// TODO error handling
@@ -268,6 +290,190 @@ class Repository implements IRepository {
 			e.printStackTrace();
 		}
 		return result;		
+	}
+
+	private int commandToInt(CommandCard command) {
+		int temp;
+		if(command == null)	{
+			temp = 0;
+		}
+		else {
+			switch (command.command) {
+				case FORWARD:
+					temp = 1;
+					break;
+				case RIGHT:
+					temp = 2;
+					break;
+				case LEFT:
+					temp = 3;
+					break;
+				case FAST_FORWARD:
+					temp = 4;
+					break;
+				case SUPER_FAST_FORWARD:
+					temp = 5;
+					break;
+				case TURN_180:
+					temp = 6;
+					break;
+				case TURN_180_FORWARD:
+					temp = 7;
+					break;
+				case OPTION_LEFT_RIGHT:
+					temp = 8;
+					break;
+
+				default:
+					temp = 0;
+			}
+		}
+		return temp;
+	}
+
+	private Command intToCommand(int commandIndex)
+	{
+		Command temp = null;
+
+		switch (commandIndex) {
+			case 1:
+				temp = Command.FORWARD;
+				break;
+			case 2:
+				temp = Command.RIGHT;
+				break;
+			case 3:
+				temp = Command.LEFT;
+				break;
+			case 4:
+				temp = Command.FAST_FORWARD;
+				break;
+			case 5:
+				temp = Command.SUPER_FAST_FORWARD;
+				break;
+			case 6:
+				temp = Command.TURN_180;
+				break;
+			case 7:
+				temp = Command.TURN_180_FORWARD;
+				break;
+			case 8:
+				temp = Command.OPTION_LEFT_RIGHT;
+				break;
+			default:
+				// DO NOTHING (for now)
+		}
+		return temp;
+	}
+
+	private void createCardFieldsInDB(Board game) throws SQLException {
+		PreparedStatement ps = getSelectCardsStatementU();
+		ps.setInt(1, game.getGameId());
+
+		ResultSet rs = ps.executeQuery();
+		for(int i = 0; i < game.getPlayersNumber(); i++) {
+			Player player = game.getPlayer(i);
+			System.out.println(player);
+			rs.moveToInsertRow();
+			rs.updateInt(CARD_GAMEID, game.getGameId());
+			rs.updateInt(CARD_PLAYERID, i);
+
+			rs.updateInt(CARD_HAND0, commandToInt(player.getCardField(0).getCard()));
+			rs.updateInt(CARD_HAND1, commandToInt(player.getCardField(1).getCard()));
+			rs.updateInt(CARD_HAND2, commandToInt(player.getCardField(2).getCard()));
+			rs.updateInt(CARD_HAND3, commandToInt(player.getCardField(3).getCard()));
+			rs.updateInt(CARD_HAND4, commandToInt(player.getCardField(4).getCard()));
+			rs.updateInt(CARD_HAND5, commandToInt(player.getCardField(5).getCard()));
+			rs.updateInt(CARD_HAND6, commandToInt(player.getCardField(6).getCard()));
+			rs.updateInt(CARD_HAND7, commandToInt(player.getCardField(7).getCard()));
+
+			rs.updateInt(CARD_REGISTER0, commandToInt(player.getProgramField(0).getCard()));
+			rs.updateInt(CARD_REGISTER1, commandToInt(player.getProgramField(1).getCard()));
+			rs.updateInt(CARD_REGISTER2, commandToInt(player.getProgramField(2).getCard()));
+			rs.updateInt(CARD_REGISTER3, commandToInt(player.getProgramField(3).getCard()));
+			rs.updateInt(CARD_REGISTER4, commandToInt(player.getProgramField(4).getCard()));
+
+			rs.insertRow();
+		}
+		rs.close();
+	}
+
+	private void loadCardFieldsFromDB(Board game) throws SQLException {
+		PreparedStatement ps = getSelectCardsASCStatement();
+		ps.setInt(1, game.getGameId());
+
+		ResultSet rs = ps.executeQuery();
+
+		int i = 0;
+		while (rs.next()) {
+			int playerId = rs.getInt(CARD_PLAYERID);
+
+			if (i == playerId) {
+				if (rs.getInt(CARD_HAND0) != 0)
+					game.getPlayer(i).getCardField(0).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND0))));
+				if (rs.getInt(CARD_HAND1) != 0)
+					game.getPlayer(i).getCardField(1).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND1))));
+				if (rs.getInt(CARD_HAND2) != 0)
+					game.getPlayer(i).getCardField(2).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND2))));
+				if (rs.getInt(CARD_HAND3) != 0)
+					game.getPlayer(i).getCardField(3).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND3))));
+				if (rs.getInt(CARD_HAND4) != 0)
+					game.getPlayer(i).getCardField(4).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND4))));
+				if (rs.getInt(CARD_HAND5) != 0)
+					game.getPlayer(i).getCardField(5).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND5))));
+				if (rs.getInt(CARD_HAND6) != 0)
+					game.getPlayer(i).getCardField(6).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND6))));
+				if (rs.getInt(CARD_HAND7) != 0)
+					game.getPlayer(i).getCardField(7).setCard(new CommandCard(intToCommand(rs.getInt(CARD_HAND7))));
+
+				if (rs.getInt(CARD_REGISTER0) != 0)
+					game.getPlayer(i).getProgramField(0).setCard(new CommandCard(intToCommand(rs.getInt(CARD_REGISTER0))));
+				if (rs.getInt(CARD_REGISTER1) != 0)
+					game.getPlayer(i).getProgramField(1).setCard(new CommandCard(intToCommand(rs.getInt(CARD_REGISTER1))));
+				if (rs.getInt(CARD_REGISTER2) != 0)
+					game.getPlayer(i).getProgramField(2).setCard(new CommandCard(intToCommand(rs.getInt(CARD_REGISTER2))));
+				if (rs.getInt(CARD_REGISTER3) != 0)
+					game.getPlayer(i).getProgramField(3).setCard(new CommandCard(intToCommand(rs.getInt(CARD_REGISTER3))));
+				if (rs.getInt(CARD_REGISTER4) != 0)
+					game.getPlayer(i).getProgramField(4).setCard(new CommandCard(intToCommand(rs.getInt(CARD_REGISTER4))));
+			} else {
+				// TODO error handling
+				System.err.println("Player with id " + i +" not found in the Card table");
+			}
+			i++;
+		}
+		rs.close();
+	}
+
+	private void updateCardFieldsInDB(Board game) throws SQLException {
+		PreparedStatement ps = getSelectCardsStatementU();
+		ps.setInt(1, game.getGameId());
+
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+
+			int playerId = rs.getInt(CARD_PLAYERID);
+			Player player = game.getPlayer(playerId);
+
+			rs.updateInt(CARD_HAND0, commandToInt(player.getCardField(0).getCard()));
+			rs.updateInt(CARD_HAND1, commandToInt(player.getCardField(1).getCard()));
+			rs.updateInt(CARD_HAND2, commandToInt(player.getCardField(2).getCard()));
+			rs.updateInt(CARD_HAND3, commandToInt(player.getCardField(3).getCard()));
+			rs.updateInt(CARD_HAND4, commandToInt(player.getCardField(4).getCard()));
+			rs.updateInt(CARD_HAND5, commandToInt(player.getCardField(5).getCard()));
+			rs.updateInt(CARD_HAND6, commandToInt(player.getCardField(6).getCard()));
+			rs.updateInt(CARD_HAND7, commandToInt(player.getCardField(7).getCard()));
+
+			rs.updateInt(CARD_REGISTER0, commandToInt(player.getProgramField(0).getCard()));
+			rs.updateInt(CARD_REGISTER1, commandToInt(player.getProgramField(1).getCard()));
+			rs.updateInt(CARD_REGISTER2, commandToInt(player.getProgramField(2).getCard()));
+			rs.updateInt(CARD_REGISTER3, commandToInt(player.getProgramField(3).getCard()));
+			rs.updateInt(CARD_REGISTER4, commandToInt(player.getProgramField(4).getCard()));
+			rs.updateRow();
+		}
+		rs.close();
+
+		// TODO error handling/consistency check: check whether all players were updated
 	}
 
 	private void createPlayersInDB(Board game) throws SQLException {
@@ -445,6 +651,45 @@ class Repository implements IRepository {
 		return select_games_stmt;
 	}
 
+	private static final String SQL_SELECT_CARDS =
+			"SELECT * FROM Cards WHERE gameID = ?";
 
+	private PreparedStatement select_cards_stmt = null;
+
+	private PreparedStatement getSelectCardsStatementU() {
+		if(select_cards_stmt == null) {
+			Connection connection = connector.getConnection();
+			try {
+				select_cards_stmt = connection.prepareStatement(
+						SQL_SELECT_CARDS,
+						ResultSet.TYPE_FORWARD_ONLY,
+						ResultSet.CONCUR_UPDATABLE);
+			} catch (SQLException e) {
+				// TODO error handling
+				e.printStackTrace();
+			}
+		}
+		return select_cards_stmt;
+	}
+
+	private static final String SQL_SELECT_CARDS_ASC =
+			"SELECT * FROM Cards WHERE gameID = ? ORDER BY playerID ASC";
+
+	private PreparedStatement select_cards_asc_stmt = null;
+
+	private PreparedStatement getSelectCardsASCStatement() {
+		if (select_cards_asc_stmt == null) {
+			Connection connection = connector.getConnection();
+			try {
+				// This statement does not need to be updatable
+				select_cards_asc_stmt = connection.prepareStatement(
+						SQL_SELECT_CARDS_ASC);
+			} catch (SQLException e) {
+				// TODO error handling
+				e.printStackTrace();
+			}
+		}
+		return select_cards_asc_stmt;
+	}
 
 }

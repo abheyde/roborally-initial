@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_14_04_2021,_11_21_[Default_Changelist]" date="1618392087733" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2021,_11_21_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 14/04/2021, 11.21 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" />
+    <option name="AFTER_PATH" value="target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2021,_11_21_[Default_Changelist]/Space$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" />
+    <option name="AFTER_PATH" value="target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2021,_11_21_[Default_Changelist]/SpaceView.class" />
+  </binary>
+</changelist>
