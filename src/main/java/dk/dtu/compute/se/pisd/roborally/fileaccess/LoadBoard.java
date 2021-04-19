@@ -62,10 +62,10 @@ public class LoadBoard {
         Gson gson = simpleBuilder.create();
 
 		Board result;
-		// FileReader fileReader = null;
+		//FileReader fileReader = null;
         JsonReader reader = null;
 		try {
-			// fileReader = new FileReader(filename);
+			//fileReader = new FileReader(boardname);
 			reader = gson.newJsonReader(new InputStreamReader(inputStream));
 			BoardTemplate template = gson.fromJson(reader, BoardTemplate.class);
 

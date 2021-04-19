@@ -23,10 +23,8 @@ package dk.dtu.compute.se.pisd.roborally.view;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
 import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
-import dk.dtu.compute.se.pisd.roborally.model.Board;
-import dk.dtu.compute.se.pisd.roborally.model.Heading;
-import dk.dtu.compute.se.pisd.roborally.model.Player;
-import dk.dtu.compute.se.pisd.roborally.model.Space;
+import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
+import dk.dtu.compute.se.pisd.roborally.model.*;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
@@ -44,7 +42,8 @@ import org.w3c.dom.css.Rect;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Alexander Bak Heyde, s3576@student.dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
@@ -100,20 +99,53 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     public void updateWalls(){
-        if (space.x == 5 && space.y == 5){
-            Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
+        Space space = this.space;
+        if (space != null && !space.getWalls().isEmpty()) {
+            for (Heading wall : space.getWalls()) {
 
-            GraphicsContext gc = canvas.getGraphicsContext2D();
-            gc.setStroke(Color.RED);
-            gc.setLineWidth(5);
-            gc.setLineCap(StrokeLineCap.ROUND);
+                Canvas canvas = new Canvas(SPACE_WIDTH, SPACE_HEIGHT);
+                GraphicsContext gc = canvas.getGraphicsContext2D();
+                gc.setStroke(Color.RED);
+                gc.setLineWidth(5);
+                gc.setLineCap(StrokeLineCap.ROUND);
+                this.getChildren().add(canvas);
 
-            gc.strokeLine(SPACE_HEIGHT-2,2,2,2);
-            this.getChildren().add(canvas);
+                switch(wall) {
+                    case SOUTH:
+                        gc.strokeLine(SPACE_HEIGHT-2, 73, 0, 73);
+                        break;
+
+                    case WEST:
+                        gc.strokeLine( 2, SPACE_HEIGHT-2, 2, 2);
+                        break;
+
+                    case NORTH:
+                        gc.strokeLine(2,2,SPACE_HEIGHT-2,2);
+                        break;
+
+                    case EAST:
+                        gc.strokeLine(73,0,73,SPACE_HEIGHT-2);
+                        break;
+                }
+            }
         }
     }
 
     private void updateBelt() {
+        ConveyorBelt belt = space.getConveyorBelt();
+        if (belt != null){
+            Polygon fig = new Polygon(0.0,0.0,60.0,0.0,30.0,60.0);
+
+            try {
+                fig.setFill(Color.LIGHTPINK);
+            } catch (Exception e) {
+                fig.setFill(Color.CHOCOLATE);
+            }
+
+            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
+            this.getChildren().add(fig);
+        }
+        /*
         ConveyorBelt belt = space.getConveyorBelt();
         if (belt != null) {
 
@@ -126,16 +158,34 @@ public class SpaceView extends StackPane implements ViewObserver {
             fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
             this.getChildren().add(fig);
         }
+         */
 
     }
+private void updateGears() {
+    for (FieldAction action : space.actions) {
+        if (action instanceof Gear) {
 
+            Polygon fig1 = new Polygon(0.0, 0.0, 5.0, 0.0, 5.0, 5.0);
+
+            try {
+                fig1.setFill(Color.GREY);
+            } catch (Exception e) {
+                fig1.setFill(Color.GREENYELLOW);
+            }
+
+            this.getChildren().add(fig1);
+        }
+    }
+}
 
     @Override
     public void updateView(Subject subject) {
         if (subject == this.space) {
+            this.getChildren().clear();
             updatePlayer();
             updateBelt();
             updateWalls();
+            updateGears();
         }
     }
 }
