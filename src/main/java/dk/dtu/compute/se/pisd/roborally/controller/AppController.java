@@ -78,13 +78,13 @@ public class AppController implements Observer {
         String BoardSelect;
         switch (result2.get()) {
             case 1:
-                BoardSelect = "defaultBoard";
+                BoardSelect = "board1";
                 break;
             case 2:
-                BoardSelect = "newBoard";
+                BoardSelect = "board2";
                 break;
             default:
-                BoardSelect = "defaultBoard1";
+                BoardSelect = "defaultboard";
                 break;
 
         }
@@ -99,15 +99,44 @@ public class AppController implements Observer {
                 }
             }
 
-            // This creates a new game, with a specific board
-            Board board = LoadBoard.loadBoard("board2");
-            gameController = new GameController(board);
-            int no = result.get();
-            for (int i = 0; i < no; i++) {
-                Player player = new Player(board, PLAYER_COLORS.get(i), "Player " + (i + 1));
-                board.addPlayer(player);
-                player.setSpace(board.getSpace(i % board.width, i));
+            if (BoardSelect == "board1") {
+                Board board = LoadBoard.loadBoard("board1");
+                gameController = new GameController(board);
+                int no = result.get();
+                for (int i = 0; i < no; i++) {
+                    Player player = new Player(board, PLAYER_COLORS.get(i), "Player " + (i + 1));
+                    board.addPlayer(player);
+                    player.setSpace(board.getSpace(i % board.width, i));
+                }
+            } else if (BoardSelect == "board2"){
+                Board board1 = LoadBoard.loadBoard("board2");
+                gameController = new GameController(board1);
+                int no1 = result.get();
+                for (int i = 0; i < no1; i++) {
+                    Player player = new Player(board1, PLAYER_COLORS.get(i), "Player " + (i + 1));
+                    board1.addPlayer(player);
+                    player.setSpace(board1.getSpace(i % board1.width, i));
+                }
+            } else {
+                Board board2 = LoadBoard.loadBoard("defaultboard");
+                gameController = new GameController(board2);
+                int no1 = result.get();
+                for (int i = 0; i < no1; i++) {
+                    Player player = new Player(board2, PLAYER_COLORS.get(i), "Player " + (i + 1));
+                    board2.addPlayer(player);
+                    player.setSpace(board2.getSpace(i % board2.width, i));
+                }
             }
+
+//            // This creates a new game, with a specific board
+//            Board board = LoadBoard.loadBoard("board1");
+//            gameController = new GameController(board);
+//            int no = result.get();
+//            for (int i = 0; i < no; i++) {
+//                Player player = new Player(board, PLAYER_COLORS.get(i), "Player " + (i + 1));
+//                board.addPlayer(player);
+//                player.setSpace(board.getSpace(i % board.width, i));
+//            }
 
             // XXX: V2
             // board.setCurrentPlayer(board.getPlayer(0));

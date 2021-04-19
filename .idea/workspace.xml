@@ -3,10 +3,15 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="Made load and save branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/dal/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/dal/Repository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,21 +125,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="Made load and save branch" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="186" key="GridCell.Tab.0.bottom" timestamp="1618817249164">
+    <state width="1398" height="186" key="GridCell.Tab.0.bottom" timestamp="1618817919332">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618817249164" />
-    <state width="1398" height="186" key="GridCell.Tab.0.center" timestamp="1618817249163">
+    <state width="1398" height="186" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618817919332" />
+    <state width="1398" height="186" key="GridCell.Tab.0.center" timestamp="1618817919331">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618817249163" />
-    <state width="1398" height="186" key="GridCell.Tab.0.left" timestamp="1618817249162">
+    <state width="1398" height="186" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618817919331" />
+    <state width="1398" height="186" key="GridCell.Tab.0.left" timestamp="1618817919331">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618817249162" />
-    <state width="1398" height="186" key="GridCell.Tab.0.right" timestamp="1618817249163">
+    <state width="1398" height="186" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618817919331" />
+    <state width="1398" height="186" key="GridCell.Tab.0.right" timestamp="1618817919332">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618817249163" />
+    <state width="1398" height="186" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618817919332" />
   </component>
 </project>
