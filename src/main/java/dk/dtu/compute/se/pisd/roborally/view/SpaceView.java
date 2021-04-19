@@ -182,10 +182,10 @@ private void updateGears() {
     public void updateView(Subject subject) {
         if (subject == this.space) {
             this.getChildren().clear();
-            updatePlayer();
             updateBelt();
             updateWalls();
             updateGears();
+            updatePlayer();
         }
     }
 }
