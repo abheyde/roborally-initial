@@ -33,7 +33,7 @@ import static dk.dtu.compute.se.pisd.roborally.model.Phase.INITIALISATION;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Jens Lindegaard, s205343@student.dtu.dk
  */
 public class Board extends Subject {
 
@@ -220,17 +220,9 @@ public class Board extends Subject {
     }
 
     public String getStatusMessage() {
-        // This is actually a view aspect, but for making the first task easy for
-        // the students, this method gives a string representation of the current
-        // status of the game
-
-        // TODO Assignment V1: this string could eventually be refined
-        //      The status line should show more information based on
-        //      situation; for now, introduce a counter to the Board,
-        //      which is counted up every time a player makes a move; the
-        //      status line should show the current player and the number
-        //      of the current move!
-        return "Player = " + getCurrentPlayer().getName() + " Number of Moves = " + getCounter();
+        return "Phase: " + getPhase().name() +
+                ", Player = " + getCurrentPlayer().getName() +
+                ", Step: " + getStep();
     }
 
     // TODO Assignment V1: add a counter along with a getter and a setter, so the
@@ -245,6 +237,19 @@ public class Board extends Subject {
     public void setCounter(int counter) {
         if (counter != this.counter) {
             this.counter = counter;
+            notifyChange();
+        }
+    }
+
+    private Command userChoice = null;
+
+    public Command getUserChoice() {
+        return userChoice;
+    }
+
+    public void setUserChoice(Command userChoice) {
+        if (this.userChoice != userChoice){
+            this.userChoice = userChoice;
             notifyChange();
         }
     }

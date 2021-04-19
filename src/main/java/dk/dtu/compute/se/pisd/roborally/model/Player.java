@@ -47,6 +47,8 @@ public class Player extends Subject {
 
     private CommandCardField[] program;
     private CommandCardField[] cards;
+    private Space[] checkPoints = new Space[4];
+    private int points = 0;
 
     public Player(@NotNull Board board, String color, @NotNull String name) {
         this.board = board;
@@ -111,6 +113,7 @@ public class Player extends Subject {
         }
     }
 
+
     public Heading getHeading() {
         return heading;
     }
@@ -124,6 +127,28 @@ public class Player extends Subject {
             }
         }
     }
+
+    public Space[] getCheckPoints() {
+        return checkPoints;
+    }
+/*
+    public void addCheckPoints(Space checkPoints) {
+        boolean addPoint = true;
+        if (points == 4) {
+            System.out.println("you won the game Congratz");
+
+        } else {
+            for (int i = 0; i < points; i++) {
+                addPoint = false;
+            }
+        }
+        if (addPoint) {
+            checkPoints[points] = checkPoints;
+            points++;
+            System.out.println("You recieved +1 points");
+        }
+    }*/
+
 
     public CommandCardField getProgramField(int i) {
         return program[i];
