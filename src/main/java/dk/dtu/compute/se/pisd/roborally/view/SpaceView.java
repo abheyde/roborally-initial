@@ -130,9 +130,9 @@ public class SpaceView extends StackPane implements ViewObserver {
         public void updateView (Subject subject){
             if (subject == this.space) {
                 this.getChildren().clear();
-                updatePlayer();
                 updateBelt();
                 updateWalls();
+                updatePlayer();
             }
         }
     }
