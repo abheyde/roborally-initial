@@ -7,7 +7,7 @@ import dk.dtu.compute.se.pisd.roborally.controller.GameController;
 /**
  * ...
  *
- * @author @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author @author Alexander Bak Heyde, s193576@studnet.dtu.dk
  *
  */
 

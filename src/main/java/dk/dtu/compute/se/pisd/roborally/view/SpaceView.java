@@ -44,6 +44,7 @@ import org.w3c.dom.css.Rect;
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Alexander Bak Heyde, s3576@student.dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Krone
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
@@ -80,7 +81,6 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     private void updatePlayer() {
-        this.getChildren().clear();
 
         Player player = space.getPlayer();
         if (player != null) {
@@ -145,20 +145,6 @@ public class SpaceView extends StackPane implements ViewObserver {
             fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
             this.getChildren().add(fig);
         }
-        /*
-        ConveyorBelt belt = space.getConveyorBelt();
-        if (belt != null) {
-
-            Polygon fig = new Polygon(0.0, 0.0,
-                    60.0, 0.0,
-                    30.0, 60.0);
-
-            fig.setFill(Color.LIGHTGRAY);
-
-            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
-            this.getChildren().add(fig);
-        }
-         */
 
     }
 private void updateGears() {
@@ -182,10 +168,11 @@ private void updateGears() {
     public void updateView(Subject subject) {
         if (subject == this.space) {
             this.getChildren().clear();
-            updatePlayer();
+
             updateBelt();
             updateWalls();
             updateGears();
+            updatePlayer();
         }
     }
 }
