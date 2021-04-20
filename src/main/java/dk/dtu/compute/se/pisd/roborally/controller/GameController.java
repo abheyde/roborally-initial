@@ -46,13 +46,13 @@ public class GameController {
 //     * @param space the space to which the current player should move
 //     */
 //    public void moveCurrentPlayerToSpace(@NotNull Space space)  {
-        // TODO Assignment V1: method should be implemented by the students:
-        //   - the current player should be moved to the given space
-        //     (if it is free()
-        //   - and the current player should be set to the player
-        //     following the current player
-        //   - the counter of moves in the game should be increased by one
-        //     if the player is moved
+    // TODO Assignment V1: method should be implemented by the students:
+    //   - the current player should be moved to the given space
+    //     (if it is free()
+    //   - and the current player should be set to the player
+    //     following the current player
+    //   - the counter of moves in the game should be increased by one
+    //     if the player is moved
 //
 //        Player current = board.getCurrentPlayer();
 //
@@ -171,35 +171,41 @@ public class GameController {
                         executeCommand(currentPlayer, command);
                     }
                 }
-                    int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
-                    if (nextPlayerNumber < board.getPlayersNumber()) {
-                        board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
-                    } else {
-                        step++;
-                        if (step < Player.NO_REGISTERS) {
-                            makeProgramFieldsVisible(step);
-                            board.setStep(step);
-                            board.setCurrentPlayer(board.getPlayer(0));
-                        } else {
-                            startProgrammingPhase();
+                int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
+                if (nextPlayerNumber < board.getPlayersNumber()) {
+                    board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
+                } else {
+                    for (Player player : board.getPlayers()) {
+                        for (FieldAction action : player.getSpace().getActions()) {
+                            action.doAction(this, player.getSpace());
                         }
                     }
-                } else{
-                    // this should not happen
-                    assert false;
+
+                    step++;
+                    if (step < Player.NO_REGISTERS) {
+                        makeProgramFieldsVisible(step);
+                        board.setStep(step);
+                        board.setCurrentPlayer(board.getPlayer(0));
+                    } else {
+                        startProgrammingPhase();
+                    }
                 }
             } else {
                 // this should not happen
                 assert false;
             }
+        } else {
+            // this should not happen
+            assert false;
         }
+    }
 
-public void executeCommandOptionAndContinue(@NotNull Command option) {
+    public void executeCommandOptionAndContinue(@NotNull Command option) {
         assert board.getPhase() == Phase.PLAYER_INTERACTION;
         assert board.getCurrentPlayer() != null;
         board.setUserChoice(option);
         continuePrograms();
-}
+    }
 
     private void executeCommand(@NotNull Player player, Command command) {
         if (player != null && player.board == board && command != null) {
@@ -256,8 +262,8 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void fastForward(@NotNull Player player) {
-         moveForward(player);
-         moveForward(player);
+        moveForward(player);
+        moveForward(player);
     }
 
     // Assignment A3
@@ -281,7 +287,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void turnRight(@NotNull Player player) {
-        if (player != null && player.board == board){
+        if (player != null && player.board == board) {
             player.setHeading(player.getHeading().next());
         }
 
@@ -289,7 +295,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void turnLeft(@NotNull Player player) {
-        if (player != null && player.board == board){
+        if (player != null && player.board == board) {
             player.setHeading(player.getHeading().prev());
         }
 
@@ -329,6 +335,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
         }
         player.setSpace(space);
     }
+
     // Assignment A3
     class ImpossibleMoveException extends Exception {
 
