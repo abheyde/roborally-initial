@@ -72,19 +72,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RoboRally" />
@@ -152,22 +139,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="ændret rækkefølge, spiller er foran ting nu" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="169" key="GridCell.Tab.0.bottom" timestamp="1618837839986">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="169" key="GridCell.Tab.0.bottom" timestamp="1618912087938">
+      <screen x="0" y="25" width="1440" height="791" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618837839986" />
-    <state width="1398" height="169" key="GridCell.Tab.0.center" timestamp="1618837839984">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="169" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618911410609" />
+    <state width="1398" height="169" key="GridCell.Tab.0.bottom/0.25.1440.791@0.25.1440.791" timestamp="1618912087938" />
+    <state width="1398" height="169" key="GridCell.Tab.0.center" timestamp="1618912087937">
+      <screen x="0" y="25" width="1440" height="791" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618837839984" />
-    <state width="1398" height="169" key="GridCell.Tab.0.left" timestamp="1618837839982">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="169" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618911410608" />
+    <state width="1398" height="169" key="GridCell.Tab.0.center/0.25.1440.791@0.25.1440.791" timestamp="1618912087937" />
+    <state width="1398" height="169" key="GridCell.Tab.0.left" timestamp="1618912087937">
+      <screen x="0" y="25" width="1440" height="791" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618837839982" />
-    <state width="1398" height="169" key="GridCell.Tab.0.right" timestamp="1618837839985">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="169" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618911410607" />
+    <state width="1398" height="169" key="GridCell.Tab.0.left/0.25.1440.791@0.25.1440.791" timestamp="1618912087937" />
+    <state width="1398" height="169" key="GridCell.Tab.0.right" timestamp="1618912087938">
+      <screen x="0" y="25" width="1440" height="791" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618837839985" />
+    <state width="1398" height="169" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618911410608" />
+    <state width="1398" height="169" key="GridCell.Tab.0.right/0.25.1440.791@0.25.1440.791" timestamp="1618912087938" />
     <state x="258" y="109" key="Maven.ArtifactSearchDialog" timestamp="1618837535324">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
