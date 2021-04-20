@@ -63,6 +63,7 @@ class Repository implements IRepository {
 
 	private static final String CARD_GAMEID = "gameID";
 	private static final String CARD_PLAYERID = "playerID";
+
 	private static final String CARD_HAND0 = "hand0";
 	private static final String CARD_HAND1 = "hand1";
 	private static final String CARD_HAND2 = "hand2";
@@ -77,6 +78,8 @@ class Repository implements IRepository {
 	private static final String CARD_REGISTER2 = "register2";
 	private static final String CARD_REGISTER3 = "register3";
 	private static final String CARD_REGISTER4 = "register4";
+
+	private static final String BORD_NAME = "boardName";
 
 	private Connector connector;
 	
@@ -100,9 +103,7 @@ class Repository implements IRepository {
 				ps.setInt(2, game.getPlayerNumber(game.getCurrentPlayer()));
 				ps.setInt(3, game.getPhase().ordinal());
 				ps.setInt(4, game.getStep());
-
-
-				//ps.setString(5, game.boardName);
+				ps.setString(5, game.boardName);
 
 				// If you have a foreign key constraint for current players,
 				// the check would need to be temporarily disabled, since
@@ -232,7 +233,7 @@ class Repository implements IRepository {
 				// game = new Board(width,height);
 				// TODO and we should also store the used game board in the database
 				//      for now, we use the default game board
-				game = LoadBoard.loadBoard(rs.getString("name"));
+				game = LoadBoard.loadBoard(rs.getString(BORD_NAME));
 				if (game == null) {
 					return null;
 				}
@@ -551,7 +552,7 @@ class Repository implements IRepository {
 	}
 
 	private static final String SQL_INSERT_GAME =
-			"INSERT INTO Game(name, currentPlayer, phase, step) VALUES (?, ?, ?, ?)";
+			"INSERT INTO Game(name, currentPlayer, phase, step, boardName) VALUES (?, ?, ?, ?, ?)";
 
 	private PreparedStatement insert_game_stmt = null;
 
