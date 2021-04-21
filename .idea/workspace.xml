@@ -8,7 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="tilføjet checkpoints" />
+    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="ændret størrelsen tilbage til original på spaceview">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619005342112</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ændret størrelsen tilbage til original på spaceview">
+      <created>1619005616015</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619005616015</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ændret størrelsen tilbage til original på spaceview">
+      <created>1619005670331</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619005670331</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,29 +204,30 @@
     <MESSAGE value="tilføjet readme" />
     <MESSAGE value="sat op til alex's mac" />
     <MESSAGE value="tilføjet checkpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet checkpoints" />
+    <MESSAGE value="ændret størrelsen tilbage til original på spaceview" />
+    <option name="LAST_COMMIT_MESSAGE" value="ændret størrelsen tilbage til original på spaceview" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1618999633795">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1618999633795" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1619004748733">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1619006105079">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619004748733" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1619004748732">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619006105079" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1619006105078">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619004748732" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1619004748731">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619006105078" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1619006105077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619004748731" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1619004748732">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619006105077" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1619006105079">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619004748732" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619006105079" />
     <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1619004748736">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
