@@ -169,7 +169,7 @@ private void updateGears() {
         for (FieldAction action : space.actions) {
             if (action instanceof Checkpoint) {
 
-                Polygon fig2 = new Polygon(0.0, 0.0, 40.0, 0.0, 40.0, 40.0);
+                Rectangle fig2 = new Rectangle(50,50);
 
                 try {
                     fig2.setFill(Color.TURQUOISE);
