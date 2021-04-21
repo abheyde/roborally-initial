@@ -57,6 +57,12 @@ public class Board extends Subject {
 
     private boolean stepMode;
 
+    private final List<Checkpoint> checkpoints = new ArrayList<>();
+
+    public List<Checkpoint> getCheckpoints() {
+        return checkpoints;
+    }
+
     public List<Player> getPlayers() {
         return players;
     }

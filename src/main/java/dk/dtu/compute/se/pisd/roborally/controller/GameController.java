@@ -22,6 +22,9 @@
 package dk.dtu.compute.se.pisd.roborally.controller;
 
 import dk.dtu.compute.se.pisd.roborally.model.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import jdk.nashorn.internal.runtime.options.Option;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -34,6 +37,8 @@ import org.jetbrains.annotations.NotNull;
 public class GameController {
 
     final public Board board;
+
+    public boolean won = false;
 
     public GameController(@NotNull Board board) {
         this.board = board;
@@ -178,6 +183,8 @@ public class GameController {
                     for (Player player : board.getPlayers()) {
                         for (FieldAction action : player.getSpace().getActions()) {
                             action.doAction(this, player.getSpace());
+                            if (won);
+                            break;
                         }
                     }
 
@@ -351,6 +358,16 @@ public class GameController {
 
             // Checks if the move is possible
         }
+    }
+
+    public void playerWon(Player player) {
+        Alert winning = new Alert(Alert.AlertType.CONFIRMATION);
+        winning.setTitle("WINNER WINNER CHICKEN DINNER!");
+        String string = ("PLAYER " + player.getColor() + " YOU ARE A REAL ROBOKING!");
+        string.toUpperCase();
+        winning.setContentText(string);
+        this.won = true;
+        winning.showAndWait();
     }
 
     /**

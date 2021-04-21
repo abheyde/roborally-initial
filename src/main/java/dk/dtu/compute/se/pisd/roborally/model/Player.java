@@ -47,8 +47,7 @@ public class Player extends Subject {
 
     private CommandCardField[] program;
     private CommandCardField[] cards;
-    private Space[] checkPoints = new Space[4];
-    private int points = 0;
+    private int checkPoints;
 
     public Player(@NotNull Board board, String color, @NotNull String name) {
         this.board = board;
@@ -127,8 +126,14 @@ public class Player extends Subject {
             }
         }
     }
+    public void setCheckPoints(int checkPoints) {
+        if (checkPoints == this.checkPoints + 1) {
+            this.checkPoints = checkPoints;
+            notifyChange();
+        }
+    }
 
-    public Space[] getCheckPoints() {
+    public int getCheckPoints() {
         return checkPoints;
     }
 /*

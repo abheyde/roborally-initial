@@ -102,7 +102,7 @@ public class Space extends Subject {
                 newY = (y - 1) % board.height;
 
                 if (newY == -1)
-                    newY = 7;
+                    newY = 9;
 
                 break;
             case SOUTH:
@@ -113,7 +113,7 @@ public class Space extends Subject {
                 newX = (x - 1) % board.width;
 
                 if (newX == -1)
-                    newX = 7;
+                    newX = 9;
 
                 newY = y;
                 break;

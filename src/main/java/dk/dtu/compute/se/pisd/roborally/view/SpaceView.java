@@ -48,8 +48,8 @@ import org.w3c.dom.css.Rect;
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
-    final public static int SPACE_HEIGHT = 75; // 60; // 75;
-    final public static int SPACE_WIDTH = 75;  // 60; // 75;
+    final public static int SPACE_HEIGHT = 40; // 60; // 75;
+    final public static int SPACE_WIDTH = 40;  // 60; // 75;
 
     public final Space space;
 
@@ -147,11 +147,12 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
 
     }
+
 private void updateGears() {
     for (FieldAction action : space.actions) {
         if (action instanceof Gear) {
 
-            Polygon fig1 = new Polygon(0.0, 0.0, 5.0, 0.0, 5.0, 5.0);
+            Polygon fig1 = new Polygon(0.0, 0.0, 30.0, 0.0, 30.0, 30.0);
 
             try {
                 fig1.setFill(Color.GREY);
@@ -164,6 +165,23 @@ private void updateGears() {
     }
 }
 
+    private void updateCheckpoints() {
+        for (FieldAction action : space.actions) {
+            if (action instanceof Checkpoint) {
+
+                Polygon fig2 = new Polygon(0.0, 0.0, 40.0, 0.0, 40.0, 40.0);
+
+                try {
+                    fig2.setFill(Color.TURQUOISE);
+                } catch (Exception e) {
+                    fig2.setFill(Color.MEDIUMORCHID);
+                }
+
+                this.getChildren().add(fig2);
+            }
+        }
+    }
+
     @Override
     public void updateView(Subject subject) {
         if (subject == this.space) {
@@ -172,6 +190,7 @@ private void updateGears() {
             updateBelt();
             updateWalls();
             updateGears();
+            updateCheckpoints();
             updatePlayer();
         }
     }
