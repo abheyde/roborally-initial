@@ -16,6 +16,19 @@
       "y": 0
     },
     {
+    "walls": [],
+    "actions": [
+      {
+        "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+        "INSTANCE": {
+          "direction": "LEFT"
+        }
+      }
+    ],
+    "x": 1,
+    "y": 1
+    },
+    {
       "walls": [],
       "actions": [
         {
@@ -209,6 +222,19 @@
       "walls": [],
       "actions": [
         {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "direction": "RIGHT"
+          }
+        }
+      ],
+      "x": 0,
+      "y": 3
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt",
           "INSTANCE": {
             "heading": "SOUTH"
@@ -256,6 +282,19 @@
       "y": 3
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "direction": "LEFT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 4
+    },
+    {
       "walls": [
         "EAST"
       ],
@@ -298,6 +337,19 @@
       "y": 4
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "direction": "RIGHT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 5
+    },
+    {
       "walls": [
         "EAST"
       ],
@@ -338,6 +390,19 @@
       ],
       "x": 11,
       "y": 5
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "direction": "LEFT"
+          }
+        }
+      ],
+      "x": 0,
+      "y": 6
     },
     {
       "walls": [],
@@ -435,6 +500,19 @@
       ],
       "x": 11,
       "y": 7
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "direction": "RIGHT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 8
     },
     {
       "walls": [],

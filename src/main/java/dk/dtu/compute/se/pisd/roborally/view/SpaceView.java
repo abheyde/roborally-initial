@@ -151,12 +151,12 @@ private void updateGears() {
     for (FieldAction action : space.actions) {
         if (action instanceof Gear) {
 
-            Polygon fig1 = new Polygon(0.0, 0.0, 5.0, 0.0, 5.0, 5.0);
+            Rectangle fig1 = new Rectangle(50,50);
 
             try {
-                fig1.setFill(Color.GREY);
-            } catch (Exception e) {
                 fig1.setFill(Color.GREENYELLOW);
+            } catch (Exception e) {
+                fig1.setFill(Color.GREY);
             }
 
             this.getChildren().add(fig1);
