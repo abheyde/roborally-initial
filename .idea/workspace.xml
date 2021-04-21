@@ -8,7 +8,6 @@
     <select />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="tilføjet readme">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -16,11 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
     </list>
-=======
-    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="tilføjet readme" />
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,22 +79,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
-=======
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
->>>>>>> Stashed changes
     <recent_temporary>
       <list>
         <item itemvalue="Application.RoboRally" />
@@ -130,11 +120,8 @@
       <workItem from="1618909853086" duration="640000" />
       <workItem from="1618918224147" duration="48000" />
       <workItem from="1618925243325" duration="5119000" />
-<<<<<<< Updated upstream
       <workItem from="1618931446008" duration="2664000" />
-=======
       <workItem from="1618931281499" duration="12000" />
->>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -180,5 +167,27 @@
     <MESSAGE value="ændret rækkefølge, spiller er foran ting nu" />
     <MESSAGE value="tilføjet readme" />
     <option name="LAST_COMMIT_MESSAGE" value="tilføjet readme" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1618997623514">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618997623514" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1618997623513">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618997623513" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1618997623512">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618997623512" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1618997623514">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618997623514" />
+    <state x="208" y="28" key="SettingsEditor" timestamp="1618996360077">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="28" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1618996360077" />
   </component>
 </project>
