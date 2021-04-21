@@ -48,8 +48,8 @@ import org.w3c.dom.css.Rect;
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
-    final public static int SPACE_HEIGHT = 40; // 60; // 75;
-    final public static int SPACE_WIDTH = 40;  // 60; // 75;
+    final public static int SPACE_HEIGHT = 75; // 60; // 75;
+    final public static int SPACE_WIDTH = 75;  // 60; // 75;
 
     public final Space space;
 
