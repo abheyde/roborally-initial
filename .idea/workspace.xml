@@ -9,15 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="Tilføjet Gears til board1 og board2.&#10;Har sat Gears til at være grønne firkanter">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/emty_field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gearleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gearright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/pit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/splashscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/startpoint.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/dal/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/boards/board1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/boards/board1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boards/board1.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/board1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/CommandCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/CommandCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/BoardView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/BoardView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/CardFieldView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/CardFieldView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/PlayerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/PlayerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boards/board2.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/board2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +68,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -131,6 +136,7 @@
       <workItem from="1619006723900" duration="120000" />
       <workItem from="1619014079128" duration="107000" />
       <workItem from="1619023098596" duration="1020000" />
+      <workItem from="1620635310115" duration="1008000" />
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
