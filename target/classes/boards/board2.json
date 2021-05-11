@@ -21,7 +21,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "LEFT"
+            "rotation": "LEFT"
           }
         }
       ],
@@ -183,7 +183,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "RIGHT"
+            "rotation": "RIGHT"
           }
         }
       ],
@@ -241,7 +241,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
           "INSTANCE": {
-            "heading": "NORTH"
+            "number": 1
           }
         }
       ],
@@ -254,7 +254,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "LEFT"
+            "rotation": "LEFT"
           }
         }
       ],
@@ -301,7 +301,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "RIGHT"
+            "rotation": "RIGHT"
           }
         }
       ],
@@ -348,7 +348,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "LEFT"
+            "rotation": "LEFT"
           }
         }
       ],
@@ -374,7 +374,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
           "INSTANCE": {
-            "heading": "NORTH"
+            "number": 2
           }
         }
       ],
@@ -440,7 +440,7 @@
         {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
-            "direction": "RIGHT"
+            "rotation": "RIGHT"
           }
         }
       ],
