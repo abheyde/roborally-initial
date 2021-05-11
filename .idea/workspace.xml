@@ -20,9 +20,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/splashscreen.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/startpoint.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" afterDir="false" />
@@ -33,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boards/board2.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/board2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" afterDir="false" />
@@ -47,10 +46,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boards/board2.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/board2.json" afterDir="false" />
->>>>>>> alex
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,16 +156,13 @@
       <workItem from="1618925243325" duration="5119000" />
       <workItem from="1618931446008" duration="2664000" />
       <workItem from="1618931281499" duration="12000" />
-<<<<<<< HEAD
       <workItem from="1620551459730" duration="6318000" />
       <workItem from="1620636060822" duration="17359000" />
-=======
       <workItem from="1618998575158" duration="8067000" />
       <workItem from="1619006723900" duration="120000" />
       <workItem from="1619014079128" duration="107000" />
       <workItem from="1619023098596" duration="1020000" />
       <workItem from="1620635310115" duration="1008000" />
->>>>>>> alex
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -222,7 +214,6 @@
     <MESSAGE value="Made load and save branch" />
     <MESSAGE value="ændret rækkefølge, spiller er foran ting nu" />
     <MESSAGE value="tilføjet readme" />
-<<<<<<< HEAD
     <MESSAGE value="sat op til alex's mac" />
     <MESSAGE value="tilføjet checkpoints" />
     <MESSAGE value="ændret størrelsen tilbage til original på spaceview" />
@@ -300,9 +291,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-=======
-    <MESSAGE value="Tilføjet Gears til board1 og board2.&#10;Har sat Gears til at være grønne firkanter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet Gears til board1 og board2.&#10;Har sat Gears til at være grønne firkanter" />
->>>>>>> alex
   </component>
 </project>
