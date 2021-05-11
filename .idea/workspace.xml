@@ -10,6 +10,32 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="ændret størrelsen tilbage til original på spaceview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Gear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Gear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +156,8 @@
       <workItem from="1618925243325" duration="5119000" />
       <workItem from="1618931446008" duration="2664000" />
       <workItem from="1618931281499" duration="12000" />
+      <workItem from="1620551459730" duration="6318000" />
+      <workItem from="1620636060822" duration="17359000" />
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -208,46 +236,50 @@
     <option name="LAST_COMMIT_MESSAGE" value="ændret størrelsen tilbage til original på spaceview" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1618999633795">
+    <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1620720123250">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1618999633795" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1619006105079">
+    <state x="533" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1620720123250" />
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom" timestamp="1620723961601">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619006105079" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1619006105078">
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1620723961601" />
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.25.1440.791@0.25.1440.791" timestamp="1620641942217" />
+    <state width="1398" height="168" key="GridCell.Tab.0.center" timestamp="1620723961599">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1619006105078" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1619006105077">
+    <state width="1398" height="168" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1620723961599" />
+    <state width="1398" height="153" key="GridCell.Tab.0.center/0.25.1440.791@0.25.1440.791" timestamp="1620641942216" />
+    <state width="1398" height="168" key="GridCell.Tab.0.left" timestamp="1620723961599">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1619006105077" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1619006105079">
+    <state width="1398" height="168" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1620723961599" />
+    <state width="1398" height="153" key="GridCell.Tab.0.left/0.25.1440.791@0.25.1440.791" timestamp="1620641942215" />
+    <state width="1398" height="168" key="GridCell.Tab.0.right" timestamp="1620723961600">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1619006105079" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1619004748736">
+    <state width="1398" height="168" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1620723961600" />
+    <state width="1398" height="153" key="GridCell.Tab.0.right/0.25.1440.791@0.25.1440.791" timestamp="1620641942216" />
+    <state width="1398" height="198" key="GridCell.Tab.1.bottom" timestamp="1620723735668">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1619004748736" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.25.1440.791@0.25.1440.791" timestamp="1619004475248" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1619004748734">
+    <state width="1398" height="198" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1620723735668" />
+    <state width="1398" height="198" key="GridCell.Tab.1.bottom/0.25.1440.791@0.25.1440.791" timestamp="1620723713834" />
+    <state width="1398" height="198" key="GridCell.Tab.1.center" timestamp="1620723735667">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1619004748734" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.25.1440.791@0.25.1440.791" timestamp="1619004475247" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1619004748733">
+    <state width="1398" height="198" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1620723735667" />
+    <state width="1398" height="198" key="GridCell.Tab.1.center/0.25.1440.791@0.25.1440.791" timestamp="1620723713833" />
+    <state width="1398" height="198" key="GridCell.Tab.1.left" timestamp="1620723735667">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1619004748733" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.25.1440.791@0.25.1440.791" timestamp="1619004475246" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1619004748735">
+    <state width="1398" height="198" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1620723735667" />
+    <state width="1398" height="198" key="GridCell.Tab.1.left/0.25.1440.791@0.25.1440.791" timestamp="1620723713833" />
+    <state width="1398" height="198" key="GridCell.Tab.1.right" timestamp="1620723735668">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1619004748735" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.25.1440.791@0.25.1440.791" timestamp="1619004475247" />
+    <state width="1398" height="198" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1620723735668" />
+    <state width="1398" height="198" key="GridCell.Tab.1.right/0.25.1440.791@0.25.1440.791" timestamp="1620723713834" />
     <state x="208" y="28" key="SettingsEditor" timestamp="1618996360077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -256,5 +288,24 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1619000217175" />
+    <state x="259" y="190" width="922" height="623" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1620719175362">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="259" y="190" width="922" height="623" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1620719175362" />
+    <state x="770" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1620722525727">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="770" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1620722525727" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

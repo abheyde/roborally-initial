@@ -38,7 +38,7 @@ public class GameController {
 
     final public Board board;
 
-    public boolean won = false;
+    public boolean winner = false;
 
     public GameController(@NotNull Board board) {
         this.board = board;
@@ -183,7 +183,7 @@ public class GameController {
                     for (Player player : board.getPlayers()) {
                         for (FieldAction action : player.getSpace().getActions()) {
                             action.doAction(this, player.getSpace());
-                            if (won);
+                            if (winner)
                             break;
                         }
                     }
@@ -366,7 +366,7 @@ public class GameController {
         String string = ("PLAYER " + player.getColor() + " YOU ARE A REAL ROBOKING!");
         string.toUpperCase();
         winning.setContentText(string);
-        this.won = true;
+        this.winner = true;
         winning.showAndWait();
     }
 

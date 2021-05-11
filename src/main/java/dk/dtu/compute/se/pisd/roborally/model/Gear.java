@@ -11,11 +11,15 @@ import dk.dtu.compute.se.pisd.roborally.controller.GameController;
  *
  */
 
-public class Gear extends FieldAction {
-    public Direction direction;
+enum Rotation {
+    LEFT, RIGHT
+}
 
-    public Gear (Direction direction) {
-        this.direction = direction;
+public class Gear extends FieldAction {
+    public Rotation rotation;
+
+    public Gear (Rotation rotation) {
+        this.rotation = rotation;
     }
 
     @Override
@@ -23,7 +27,7 @@ public class Gear extends FieldAction {
 
         Player player = space.getPlayer();
 
-        switch (direction) {
+        switch (rotation) {
             case LEFT:
                 gameController.turnLeft(player);
                 break;

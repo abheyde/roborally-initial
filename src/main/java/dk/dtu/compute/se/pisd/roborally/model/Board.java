@@ -22,8 +22,10 @@
 package dk.dtu.compute.se.pisd.roborally.model;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
+import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,11 +59,7 @@ public class Board extends Subject {
 
     private boolean stepMode;
 
-    private final List<Checkpoint> checkpoints = new ArrayList<>();
-
-    public List<Checkpoint> getCheckpoints() {
-        return checkpoints;
-    }
+    public int checkpoints;
 
     public List<Player> getPlayers() {
         return players;
@@ -79,6 +77,7 @@ public class Board extends Subject {
             }
         }
         this.stepMode = false;
+        this.checkpoints = 0;
     }
 
     public Board(int width, int height) {
@@ -262,5 +261,8 @@ public class Board extends Subject {
             this.userChoice = userChoice;
             notifyChange();
         }
+    }
+    public int getCheckpoints() {
+        return checkpoints;
     }
 }

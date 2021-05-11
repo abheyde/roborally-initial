@@ -29,6 +29,8 @@ import dk.dtu.compute.se.pisd.roborally.fileaccess.model.BoardTemplate;
 import dk.dtu.compute.se.pisd.roborally.fileaccess.model.SpaceTemplate;
 import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.model.Board;
+import dk.dtu.compute.se.pisd.roborally.model.Checkpoint;
+import dk.dtu.compute.se.pisd.roborally.model.Gear;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 
 import java.io.*;
@@ -70,14 +72,21 @@ public class LoadBoard {
 			BoardTemplate template = gson.fromJson(reader, BoardTemplate.class);
 
 			result = new Board(template.width, template.height);
+			int checkpoint = 0;
 			for (SpaceTemplate spaceTemplate: template.spaces) {
 			    Space space = result.getSpace(spaceTemplate.x, spaceTemplate.y);
+			    for (FieldAction action : spaceTemplate.actions) {
+                    if (action instanceof Checkpoint) {
+                        checkpoint++;
+                    }
+                }
 			    if (space != null) {
                     space.getActions().addAll(spaceTemplate.actions);
                     space.getWalls().addAll(spaceTemplate.walls);
                 }
             }
 			reader.close();
+			result.checkpoints = checkpoint;
 			return result;
 		} catch (IOException e1) {
             if (reader != null) {

@@ -27,6 +27,8 @@ import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.model.*;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -37,6 +39,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeLineCap;
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.css.Rect;
+
+import java.net.URISyntaxException;
 
 /**
  * ...
@@ -189,9 +193,42 @@ private void updateGears() {
 
             updateBelt();
             updateWalls();
-            updateGears();
-            updateCheckpoints();
+
+            for (FieldAction action : space.actions) {
+                if (action instanceof Gear) {
+                    addImage("images/gear" + ((Gear) action).rotation + ".png",-90);
+                }
+                if (action instanceof Checkpoint) {
+                    addImage("images/checkpoint" + ((Checkpoint) action).number + ".png", -90);
+                }
+            }
             updatePlayer();
         }
+    }
+
+
+    private ImageView addImage(String name) {
+        Image img = null;
+        try {
+            img = new Image(SpaceView.class.getClassLoader().getResource(name).toURI().toString());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        ImageView imgView = new ImageView(img);
+        imgView.setImage(img);
+        imgView.setFitHeight(SPACE_HEIGHT);
+        imgView.setFitWidth(SPACE_WIDTH);
+        imgView.setVisible(true);
+
+        this.getChildren().add(imgView);
+
+        return imgView;
+    }
+
+    private ImageView addImage(String name, double rotation) {
+        ImageView imageView = addImage(name);
+        imageView.setRotate(rotation);
+
+        return imageView;
     }
 }
