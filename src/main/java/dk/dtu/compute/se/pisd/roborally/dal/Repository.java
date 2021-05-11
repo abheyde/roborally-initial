@@ -81,6 +81,8 @@ class Repository implements IRepository {
 
 	private static final String BORD_NAME = "boardName";
 
+	private static final String CHECKPOINT = "checkpoint";
+
 	private Connector connector;
 	
 	Repository(Connector connector){
@@ -493,6 +495,7 @@ class Repository implements IRepository {
 			rs.updateInt(PLAYER_POSITION_X, player.getSpace().x);
 			rs.updateInt(PLAYER_POSITION_Y, player.getSpace().y);
 			rs.updateInt(PLAYER_HEADING, player.getHeading().ordinal());
+			rs.updateInt(CHECKPOINT, player.getCheckPoint());
 			rs.insertRow();
 		}
 
@@ -519,6 +522,8 @@ class Repository implements IRepository {
 				player.setSpace(game.getSpace(x,y));
 				int heading = rs.getInt(PLAYER_HEADING);
 				player.setHeading(Heading.values()[heading]);
+				int checkpoint = rs.getInt(CHECKPOINT);
+				player.setCheckPoint(checkpoint);
 
 				// TODO  should also load players program and hand here
 			} else {
