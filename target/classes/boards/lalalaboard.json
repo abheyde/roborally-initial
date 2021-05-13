@@ -45,32 +45,6 @@
       "walls": [],
       "actions": [
         {
-          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
-          "INSTANCE": {
-            "number": 3
-          }
-        }
-      ],
-      "x": 3,
-      "y": 0
-    },
-    {
-      "walls": [],
-      "actions": [
-        {
-          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
-          "INSTANCE": {
-            "number": 4
-          }
-        }
-      ],
-      "x": 4,
-      "y": 0
-    },
-    {
-      "walls": [],
-      "actions": [
-        {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
           "INSTANCE": {
             "rotation": "LEFT"

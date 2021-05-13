@@ -8,44 +8,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="Tilføjet Gears til board1 og board2.&#10;Har sat Gears til at være grønne firkanter">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checkpoint4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/emty_field.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gearleft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gearright.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/pit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/splashscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/startpoint.png" afterDir="false" />
+    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="update gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Direction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Gear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Gear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/view/SpaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/boards/lalalaboard.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/boards/lalalaboard.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boards/board2.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/board2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boards/lalalaboard.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boards/lalalaboard.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController$ImpossibleMoveException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController$ImpossibleMoveException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/controller/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/LoadBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/fileaccess/model/SpaceTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Gear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/model/Space.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dk/dtu/compute/se/pisd/roborally/controller/GameControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +82,7 @@
       <recent name="dk.dtu.compute.se.pisd.roborally.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RoboRally">
     <configuration name="RoboRally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.RoboRally" />
       <module name="roborally" />
@@ -123,13 +96,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+    <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.GearRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="GearRight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.checkpoin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="checkpoin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.checkpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="checkpoint" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,6 +162,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RoboRally" />
+        <item itemvalue="JUnit.GameControllerTest" />
+        <item itemvalue="JUnit.GameControllerTest.GearRight" />
+        <item itemvalue="JUnit.GameControllerTest.checkpoint" />
+        <item itemvalue="JUnit.GameControllerTest.checkpoin" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +202,8 @@
       <workItem from="1619014079128" duration="107000" />
       <workItem from="1619023098596" duration="1020000" />
       <workItem from="1620635310115" duration="1008000" />
+      <workItem from="1620742920058" duration="12119000" />
+      <workItem from="1620757676129" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -202,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619001425363</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update gitignore">
+      <created>1620743463581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620743463581</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,17 +265,33 @@
     <MESSAGE value="sat op til alex's mac" />
     <MESSAGE value="tilføjet checkpoints" />
     <MESSAGE value="ændret størrelsen tilbage til original på spaceview" />
-    <option name="LAST_COMMIT_MESSAGE" value="ændret størrelsen tilbage til original på spaceview" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Checkpoint.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1620750482307">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1620750482307" />
+    <state width="1398" height="210" key="GridCell.Tab.0.bottom" timestamp="1620905329286">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="210" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1620905329286" />
+    <state width="1398" height="210" key="GridCell.Tab.0.center" timestamp="1620905329284">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="210" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1620905329284" />
+    <state width="1398" height="210" key="GridCell.Tab.0.left" timestamp="1620905329283">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="210" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1620905329283" />
+    <state width="1398" height="210" key="GridCell.Tab.0.right" timestamp="1620905329285">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="210" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1620905329285" />
+    <state x="420" y="230" key="refactoring.ChangeSignatureDialog" timestamp="1620754870574">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="230" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1620754870574" />
   </component>
 </project>

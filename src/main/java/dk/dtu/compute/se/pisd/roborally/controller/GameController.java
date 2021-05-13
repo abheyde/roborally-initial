@@ -21,11 +21,16 @@
  */
 package dk.dtu.compute.se.pisd.roborally.controller;
 
+import dk.dtu.compute.se.pisd.roborally.RoboRally;
 import dk.dtu.compute.se.pisd.roborally.model.*;
+import dk.dtu.compute.se.pisd.roborally.view.RoboRallyMenuBar;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import jdk.nashorn.internal.runtime.AllocationStrategy;
 import jdk.nashorn.internal.runtime.options.Option;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Optional;
 
 /**
  * ...
@@ -183,9 +188,9 @@ public class GameController {
                     for (Player player : board.getPlayers()) {
                         for (FieldAction action : player.getSpace().getActions()) {
                             action.doAction(this, player.getSpace());
-                            if (winner)
-                            break;
                         }
+                        if (winner)
+                            break;
                     }
 
                     step++;
@@ -364,10 +369,14 @@ public class GameController {
         Alert winning = new Alert(Alert.AlertType.CONFIRMATION);
         winning.setTitle("WINNER WINNER CHICKEN DINNER!");
         String string = ("PLAYER " + player.getColor() + " YOU ARE A REAL ROBOKING!");
-        string.toUpperCase();
         winning.setContentText(string);
         this.winner = true;
         winning.showAndWait();
+
+        Alert save = new Alert(Alert.AlertType.INFORMATION);
+        save.setTitle("SAVE GAME?");
+        save.setContentText("IF YOU WOULD LIKE TO SAVE THE GAME THEN PLEASE DO SO AFTER THIS MESSAGE");
+        save.showAndWait();
     }
 
     /**
