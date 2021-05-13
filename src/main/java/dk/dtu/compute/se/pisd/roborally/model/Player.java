@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import static dk.dtu.compute.se.pisd.roborally.model.Heading.SOUTH;
 
 /**
- * ...
+ * This calss creates the player.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
@@ -126,6 +126,11 @@ public class Player extends Subject {
             }
         }
     }
+
+    /**
+     * This sets the points for how meany the checkpoints the player has been though.
+     * @param checkPoint
+     */
     public void setCheckPoint(int checkPoint) {
         if (checkPoint == (this.checkPoint + 1)) {
             this.checkPoint = checkPoint;

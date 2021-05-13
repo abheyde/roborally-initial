@@ -5,9 +5,13 @@ import dk.dtu.compute.se.pisd.roborally.controller.GameController;
 
 
 /**
- * ...
+ * This class is where we create the gear.
  *
- * @author @author Alexander Bak Heyde, s193576@studnet.dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  *
  */
 
@@ -22,6 +26,13 @@ public class Gear extends FieldAction {
         this.rotation = rotation;
     }
 
+
+    /**
+     * Here the gear rotates a player either left or right.
+     * @param gameController the gameController of the respective game
+     * @param space the space this action should be executed for
+     * @return
+     */
     @Override
     public boolean doAction (GameController gameController, Space space) {
 

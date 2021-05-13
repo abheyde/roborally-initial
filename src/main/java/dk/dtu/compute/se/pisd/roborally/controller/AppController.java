@@ -48,7 +48,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * ...
+ * This class controllers the App, for newGame, saveGame, loadGame, stopGame and exit
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  */

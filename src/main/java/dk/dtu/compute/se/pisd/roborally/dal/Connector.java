@@ -30,9 +30,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * ...
+ * This class is used to connect to the database
  *
  * @author Ekkart Kindler, ekki@dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  *
  */
 class Connector {
@@ -61,8 +66,11 @@ class Connector {
 			// Platform.exit();
 		}
     }
-    
-    private void createDatabaseSchema() {
+
+	/**
+	 * This uses our createschema file to create the tabels in the database
+	 */
+	private void createDatabaseSchema() {
 
     	String createTablesStatement =
 				IOUtil.readResource("schemas/createschema.sql");
