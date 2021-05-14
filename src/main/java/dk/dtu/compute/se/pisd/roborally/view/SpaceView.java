@@ -46,12 +46,14 @@ import org.w3c.dom.css.Rect;
 import java.net.URISyntaxException;
 
 /**
- * ...
+ * This class is used to show the individually fields.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Alexander Bak Heyde, s3576@student.dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
- * @author Krone
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
@@ -105,6 +107,9 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
     }
 
+    /**
+     * This is used to place a wall. The JSON file will use this method to place the wall.
+     */
     public void updateWalls(){
         Space space = this.space;
         if (space != null && !space.getWalls().isEmpty()) {

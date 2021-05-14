@@ -30,9 +30,14 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * ...
+ * This class creates all the data for the database
  *
  * @author Ekkart Kindler, ekki@dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  *
  */
 class Repository implements IRepository {
@@ -89,6 +94,12 @@ class Repository implements IRepository {
 		this.connector = connector;
 	}
 
+
+	/**
+	 * This creates our game ind the database.
+	 * @param game
+	 * @return if succes thrue else we get an error
+	 */
 	@Override
 	public boolean createGameInDB(Board game) {
 		if (game.getGameId() == null) {
@@ -369,6 +380,12 @@ class Repository implements IRepository {
 		return temp;
 	}
 
+
+	/**
+	 * This creats our card fields in the database
+	 * @param game
+	 * @throws SQLException
+	 */
 	private void createCardFieldsInDB(Board game) throws SQLException {
 		PreparedStatement ps = getSelectCardsStatementU();
 		ps.setInt(1, game.getGameId());
@@ -401,6 +418,12 @@ class Repository implements IRepository {
 		rs.close();
 	}
 
+
+	/**
+	 * This loads our crads from the database
+	 * @param game
+	 * @throws SQLException
+	 */
 	private void loadCardFieldsFromDB(Board game) throws SQLException {
 		PreparedStatement ps = getSelectCardsASCStatement();
 		ps.setInt(1, game.getGameId());
@@ -479,6 +502,12 @@ class Repository implements IRepository {
 		// TODO error handling/consistency check: check whether all players were updated
 	}
 
+
+	/**
+	 * This creates our player in the database
+	 * @param game
+	 * @throws SQLException
+	 */
 	private void createPlayersInDB(Board game) throws SQLException {
 		// TODO code should be more defensive
 		PreparedStatement ps = getSelectPlayersStatementU();
@@ -501,7 +530,12 @@ class Repository implements IRepository {
 
 		rs.close();
 	}
-	
+
+	/**
+	 * This loads our player form the database
+	 * @param game
+	 * @throws SQLException
+	 */
 	private void loadPlayersFromDB(Board game) throws SQLException {
 		PreparedStatement ps = getSelectPlayersASCStatement();
 		ps.setInt(1, game.getGameId());

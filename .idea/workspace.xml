@@ -32,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="READ_ME" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,7 +99,7 @@
       <module name="roborally" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,7 +115,7 @@
       <module name="roborally" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,7 +131,7 @@
       <module name="roborally" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,7 +147,7 @@
       <module name="roborally" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

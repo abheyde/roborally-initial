@@ -34,11 +34,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Optional;
 
 /**
- * ...
+ * This class controls the game.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
  * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public class GameController {
 
@@ -365,6 +368,11 @@ public class GameController {
             // Checks if the move is possible
         }
     }
+
+    /**
+     * This method is used to determine who won the game.
+     * @param player
+     */
 
     public void playerWon(Player player) {
         Alert winning = new Alert(Alert.AlertType.CONFIRMATION);

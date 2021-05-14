@@ -35,7 +35,7 @@ import javafx.scene.layout.VBox;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * ...
+ * This class is used for what the board should show.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *

@@ -32,7 +32,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- * ...
+ * This i where a game starts and the main methods is.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *

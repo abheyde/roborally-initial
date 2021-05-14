@@ -27,7 +27,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 
 /**
- * ...
+ * this class creates the menu bar
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
