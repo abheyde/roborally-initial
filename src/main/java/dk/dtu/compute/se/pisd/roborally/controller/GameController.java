@@ -24,6 +24,7 @@ package dk.dtu.compute.se.pisd.roborally.controller;
 import dk.dtu.compute.se.pisd.roborally.RoboRally;
 import dk.dtu.compute.se.pisd.roborally.model.*;
 import dk.dtu.compute.se.pisd.roborally.view.RoboRallyMenuBar;
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import jdk.nashorn.internal.runtime.AllocationStrategy;
@@ -372,11 +373,6 @@ public class GameController {
         winning.setContentText(string);
         this.winner = true;
         winning.showAndWait();
-
-        Alert save = new Alert(Alert.AlertType.INFORMATION);
-        save.setTitle("SAVE GAME?");
-        save.setContentText("IF YOU WOULD LIKE TO SAVE THE GAME THEN PLEASE DO SO AFTER THIS MESSAGE");
-        save.showAndWait();
     }
 
     /**
