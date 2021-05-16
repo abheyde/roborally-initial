@@ -1,6 +1,6 @@
 package dk.dtu.compute.se.pisd.roborally.controller;
 
-import com.sun.tools.javac.comp.Check;
+//import com.sun.tools.javac.comp.Check;
 import dk.dtu.compute.se.pisd.roborally.fileaccess.LoadBoard;
 import dk.dtu.compute.se.pisd.roborally.model.*;
 import org.junit.jupiter.api.AfterEach;
