@@ -35,7 +35,7 @@ import java.util.List;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Andreas Krone,
+ * @author Andreas Krone Reichl, s205362@student.dtu.dk
  */
 public class Space extends Subject {
 

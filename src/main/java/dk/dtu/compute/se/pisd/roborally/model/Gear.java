@@ -8,10 +8,10 @@ import dk.dtu.compute.se.pisd.roborally.controller.GameController;
  * This class is where we create the gear.
  *
  * @author Jens Lindegaard, s205343@student.dtu.dk
- * @author Alexander Bak Heyde, s193576@studnet.dut.dk
- * @author Andreas Krone
- * @author Andreas Borg
- * @author Kim Randgaard
+ * @author Alexander Bak Heyde, s193576@student.dtu.dk
+ * @author Andreas Krone Reichl, s205362@student.dtu.dk
+ * @author Andreas Borg Kristensen, s205338@student.dtu.dk
+ * @author Kim Michael Randgaard, s205341@student.dtu.dk
  *
  */
 

@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
  * This class is making the conveyorbelt.
  * We know that is should be under the model package, but got an error when trying to refactor
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Andreas Krone
+ * @author Andreas Krone Reichl, s205362@student.dtu.dk
  */
 public class ConveyorBelt extends FieldAction {
 

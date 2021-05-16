@@ -8,8 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="tilføjet ekstra test">
+    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="fjernet tools import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/ConveyorBelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/ConveyorBelt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,18 +89,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.AppControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameControllerTest.GearLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roborally" />
       <extension name="coverage">
         <pattern>
@@ -108,24 +127,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
       <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
-      <option name="METHOD_NAME" value="GearLeft" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameControllerTest.GearRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="roborally" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
-      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
-      <option name="METHOD_NAME" value="GearRight" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RoboRally" />
+        <item itemvalue="JUnit.GameControllerTest" />
+        <item itemvalue="JUnit.AppControllerTest" />
         <item itemvalue="JUnit.GameControllerTest.checkpoint" />
         <item itemvalue="JUnit.GameControllerTest.belts" />
-        <item itemvalue="JUnit.GameControllerTest.GearRight" />
-        <item itemvalue="JUnit.GameControllerTest.GearLeft" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +211,8 @@
       <workItem from="1620757676129" duration="5486000" />
       <workItem from="1621154616759" duration="222000" />
       <workItem from="1621154915850" duration="51000" />
+      <workItem from="1621156067264" duration="173000" />
+      <workItem from="1621156268857" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -252,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620906292864</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fjernet tools import">
+      <created>1621156234116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621156234116</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +290,7 @@
     <MESSAGE value="ændret størrelsen tilbage til original på spaceview" />
     <MESSAGE value="update gitignore" />
     <MESSAGE value="tilføjet ekstra test" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet ekstra test" />
+    <MESSAGE value="fjernet tools import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fjernet tools import" />
   </component>
 </project>
