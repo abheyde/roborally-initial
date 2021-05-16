@@ -1,10 +1,8 @@
 package dk.dtu.compute.se.pisd.roborally.controller;
 
+import com.sun.tools.javac.comp.Check;
 import dk.dtu.compute.se.pisd.roborally.fileaccess.LoadBoard;
-import dk.dtu.compute.se.pisd.roborally.model.Board;
-import dk.dtu.compute.se.pisd.roborally.model.Heading;
-import dk.dtu.compute.se.pisd.roborally.model.Player;
-import dk.dtu.compute.se.pisd.roborally.model.Space;
+import dk.dtu.compute.se.pisd.roborally.model.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +14,7 @@ class GameControllerTest {
 
     @BeforeEach
     void setUp() {
-        Board board = LoadBoard.loadBoard("board1");
+        Board board = LoadBoard.loadBoard("board2");
         gameController = new GameController(board);
         for (int i = 0; i < 6; i++) {
             Player player = new Player(board, null, "Player " + i);
@@ -88,11 +86,9 @@ class GameControllerTest {
         Player player = board.getCurrentPlayer();
         gameController.turn180Forward(player);
 
-        Assertions.assertEquals(player.getHeading(),
-                Heading.NORTH, player.getName() + "should be facing North!");
-        Assertions.assertEquals(player,
-                board.getSpace(0,9).getPlayer(),
-                "Player " + player.getName() + " should be Space (0,11)!");
+        Assertions.assertEquals(player.getHeading(), Heading.NORTH, player.getName() + "should be facing North!");
+
+        Assertions.assertEquals(player, board.getSpace(0,9).getPlayer(), "Player " + player.getName() + " should be Space (0,11)!");
     }
     @Test
     void turnRight() {
@@ -111,6 +107,7 @@ class GameControllerTest {
 
         Assertions.assertEquals(player.getHeading(), Heading.EAST, player.getName() + " should be facing West!");
     }
+
     @Test
     void walls() {
         Board board = gameController.board;
@@ -119,5 +116,54 @@ class GameControllerTest {
         gameController.moveForward(player);
 
         Assertions.assertEquals(player, board.getSpace(1, 1).getPlayer(), "Player " + player.getName() + " should be Space (1,1)!");
+    }
+
+    @Test
+    void GearLeft() {
+        Board board = gameController.board;
+        Player player = board.getCurrentPlayer();
+        player.setSpace(board.getSpace(1,1));
+        for (FieldAction action : player.getSpace().getActions()) {
+            action.doAction(gameController, player.getSpace());
+        }
+
+        Assertions.assertEquals(player.getHeading(), Heading.EAST, player.getName() + " should be facing East!");
+    }
+
+    @Test
+    void GearRight() {
+        Board board = gameController.board;
+        Player player = board.getCurrentPlayer();
+        player.setSpace(board.getSpace(0,3));
+        for (FieldAction action : player.getSpace().getActions()) {
+            action.doAction(gameController, player.getSpace());
+        }
+
+        Assertions.assertEquals(player.getHeading(), Heading.WEST, player.getName() + " should be facing West!");
+    }
+
+    @Test
+    void belts() {
+        Board board = gameController.board;
+        Player player = board.getCurrentPlayer();
+        player.setSpace(board.getSpace(2,0));
+        for (FieldAction action : player.getSpace().getActions()) {
+            action.doAction(gameController, player.getSpace());
+        }
+
+        Assertions.assertEquals(player, board.getSpace(3,0).getPlayer(),"Player" + player.getName() + " should be Space (3,0)!");
+    }
+
+    @Test
+    void checkpoint() {
+        Board board = gameController.board;
+        Player player = board.getCurrentPlayer();
+        player.setSpace(board.getSpace(12,3));
+        for (FieldAction action : player.getSpace().getActions()) {
+            action.doAction(gameController, player.getSpace());
+        }
+        int checkpoint = player.getCheckPoint();
+
+        Assertions.assertEquals(1, checkpoint,"Player" + player.getName() + " should have 1 checkpoint!");
     }
 }

@@ -28,10 +28,10 @@ import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * ...
- *
+ * This class is making the conveyorbelt.
+ * We know that is should be under the model package, but got an error when trying to refactor
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Krone
+ * @author Andreas Krone
  */
 public class ConveyorBelt extends FieldAction {
 
@@ -46,7 +46,6 @@ public class ConveyorBelt extends FieldAction {
     }
     @Override
     public boolean doAction(@NotNull GameController gameController, @NotNull Space space) {
-        // TODO needs to be implemented
         Player currentPlayer = space.getPlayer();
         Space neighbourSpace = space.getNeighbourSpace(this.heading);
 

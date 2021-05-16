@@ -43,6 +43,7 @@ public class Space extends Subject {
 
     private List<Heading> walls = new ArrayList<>();
     public List<FieldAction> actions = new ArrayList<>();
+    public List<FieldAction> checkpoints = new ArrayList<>();
 
     public final Board board;
 
@@ -81,13 +82,6 @@ public class Space extends Subject {
         return walls;
     }
 
-    public void setWalls(Heading heading){
-        if ( ! walls.contains(heading)) {
-            walls.add(heading);
-            notifyChange();
-        }
-    }
-
     public List<FieldAction> getActions() {
 
         return actions;
@@ -102,7 +96,7 @@ public class Space extends Subject {
                 newY = (y - 1) % board.height;
 
                 if (newY == -1)
-                    newY = 7;
+                    newY = 9;
 
                 break;
             case SOUTH:
@@ -113,7 +107,7 @@ public class Space extends Subject {
                 newX = (x - 1) % board.width;
 
                 if (newX == -1)
-                    newX = 7;
+                    newX = 9;
 
                 newY = y;
                 break;
@@ -139,6 +133,10 @@ public class Space extends Subject {
         }
 
         return belt;
+    }
+
+    public List<FieldAction> getCheckpoints() {
+        return checkpoints;
     }
 
     void playerChanged() {

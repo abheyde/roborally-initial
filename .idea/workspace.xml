@@ -8,23 +8,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="Made load and save branch">
+    <list default="true" id="f9c9f0a3-82d0-471c-a7cc-2b1e5389ce02" name="Default Changelist" comment="tilføjet ekstra test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/dal/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/dtu/compute/se/pisd/roborally/dal/Repository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="READ_ME" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1r4DaToturUb5FU1GkEF4krgHXU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -39,12 +53,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dk.dtu.compute.se.pisd.roborally.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.RoboRally">
     <configuration name="RoboRally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.RoboRally" />
       <module name="roborally" />
@@ -58,13 +87,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="GameControllerTest.GearLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="GearLeft" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.GearRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="GearRight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.belts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="belts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.checkpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="roborally" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.dtu.compute.se.pisd.roborally.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dk.dtu.compute.se.pisd.roborally.controller" />
+      <option name="MAIN_CLASS_NAME" value="dk.dtu.compute.se.pisd.roborally.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="checkpoint" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -72,6 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RoboRally" />
+        <item itemvalue="JUnit.GameControllerTest.checkpoint" />
+        <item itemvalue="JUnit.GameControllerTest.belts" />
+        <item itemvalue="JUnit.GameControllerTest.GearRight" />
+        <item itemvalue="JUnit.GameControllerTest.GearLeft" />
       </list>
     </recent_temporary>
   </component>
@@ -94,6 +180,24 @@
       <workItem from="1618754853246" duration="299000" />
       <workItem from="1618755499777" duration="6156000" />
       <workItem from="1618815887466" duration="508000" />
+      <workItem from="1618835568962" duration="705000" />
+      <workItem from="1618836301554" duration="1536000" />
+      <workItem from="1618909853086" duration="640000" />
+      <workItem from="1618918224147" duration="48000" />
+      <workItem from="1618925243325" duration="5119000" />
+      <workItem from="1618931446008" duration="2664000" />
+      <workItem from="1618931281499" duration="12000" />
+      <workItem from="1620551459730" duration="6318000" />
+      <workItem from="1620636060822" duration="17359000" />
+      <workItem from="1618998575158" duration="8067000" />
+      <workItem from="1619006723900" duration="120000" />
+      <workItem from="1619014079128" duration="107000" />
+      <workItem from="1619023098596" duration="1020000" />
+      <workItem from="1620635310115" duration="1008000" />
+      <workItem from="1620742920058" duration="12119000" />
+      <workItem from="1620757676129" duration="5486000" />
+      <workItem from="1621154616759" duration="222000" />
+      <workItem from="1621154915850" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Made load and save branch">
       <created>1618388121147</created>
@@ -102,7 +206,42 @@
       <option name="project" value="LOCAL" />
       <updated>1618388121147</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ændret rækkefølge, spiller er foran ting nu">
+      <created>1618910383765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618910383765</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tilføjet readme">
+      <created>1618918267320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618918267320</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tilføjet Gears til board1 og board2.&#10;Har sat Gears til at være grønne firkanter">
+      <created>1619001425363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619001425363</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update gitignore">
+      <created>1620743463581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620743463581</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tilføjet ekstra test">
+      <created>1620906292864</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620906292864</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,24 +261,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made load and save branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made load and save branch" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1398" height="186" key="GridCell.Tab.0.bottom" timestamp="1618817919332">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618817919332" />
-    <state width="1398" height="186" key="GridCell.Tab.0.center" timestamp="1618817919331">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618817919331" />
-    <state width="1398" height="186" key="GridCell.Tab.0.left" timestamp="1618817919331">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618817919331" />
-    <state width="1398" height="186" key="GridCell.Tab.0.right" timestamp="1618817919332">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="186" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618817919332" />
+    <MESSAGE value="ændret rækkefølge, spiller er foran ting nu" />
+    <MESSAGE value="tilføjet readme" />
+    <MESSAGE value="sat op til alex's mac" />
+    <MESSAGE value="tilføjet checkpoints" />
+    <MESSAGE value="ændret størrelsen tilbage til original på spaceview" />
+    <MESSAGE value="update gitignore" />
+    <MESSAGE value="tilføjet ekstra test" />
+    <option name="LAST_COMMIT_MESSAGE" value="tilføjet ekstra test" />
   </component>
 </project>

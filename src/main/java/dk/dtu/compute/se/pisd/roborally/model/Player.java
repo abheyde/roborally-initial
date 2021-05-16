@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import static dk.dtu.compute.se.pisd.roborally.model.Heading.SOUTH;
 
 /**
- * ...
+ * This calss creates the player.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  *
@@ -47,8 +47,7 @@ public class Player extends Subject {
 
     private CommandCardField[] program;
     private CommandCardField[] cards;
-    private Space[] checkPoints = new Space[4];
-    private int points = 0;
+    private int checkPoint;
 
     public Player(@NotNull Board board, String color, @NotNull String name) {
         this.board = board;
@@ -128,8 +127,19 @@ public class Player extends Subject {
         }
     }
 
-    public Space[] getCheckPoints() {
-        return checkPoints;
+    /**
+     * This sets the points for how meany the checkpoints the player has been though.
+     * @param checkPoint
+     */
+    public void setCheckPoint(int checkPoint) {
+        if (checkPoint == (this.checkPoint + 1)) {
+            this.checkPoint = checkPoint;
+            notifyChange();
+        }
+    }
+
+    public int getCheckPoint() {
+        return checkPoint;
     }
 /*
     public void addCheckPoints(Space checkPoints) {

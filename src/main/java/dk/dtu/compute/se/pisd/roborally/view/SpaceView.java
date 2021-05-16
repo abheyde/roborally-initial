@@ -27,6 +27,8 @@ import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import dk.dtu.compute.se.pisd.roborally.model.*;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -36,14 +38,22 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeLineCap;
 import org.jetbrains.annotations.NotNull;
+import java.awt.*;
+import java.net.URISyntaxException;
+
 import org.w3c.dom.css.Rect;
 
+import java.net.URISyntaxException;
+
 /**
- * ...
+ * This class is used to show the individually fields.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Alexander Bak Heyde, s3576@student.dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public class SpaceView extends StackPane implements ViewObserver {
 
@@ -80,7 +90,6 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     private void updatePlayer() {
-        this.getChildren().clear();
 
         Player player = space.getPlayer();
         if (player != null) {
@@ -98,6 +107,9 @@ public class SpaceView extends StackPane implements ViewObserver {
         }
     }
 
+    /**
+     * This is used to place a wall. The JSON file will use this method to place the wall.
+     */
     public void updateWalls(){
         Space space = this.space;
         if (space != null && !space.getWalls().isEmpty()) {
@@ -145,32 +157,19 @@ public class SpaceView extends StackPane implements ViewObserver {
             fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
             this.getChildren().add(fig);
         }
-        /*
-        ConveyorBelt belt = space.getConveyorBelt();
-        if (belt != null) {
-
-            Polygon fig = new Polygon(0.0, 0.0,
-                    60.0, 0.0,
-                    30.0, 60.0);
-
-            fig.setFill(Color.LIGHTGRAY);
-
-            fig.setRotate((90 * belt.getHeading().ordinal()) % 360);
-            this.getChildren().add(fig);
-        }
-         */
 
     }
+
 private void updateGears() {
     for (FieldAction action : space.actions) {
         if (action instanceof Gear) {
 
-            Polygon fig1 = new Polygon(0.0, 0.0, 5.0, 0.0, 5.0, 5.0);
+            Rectangle fig1 = new Rectangle(50,50);
 
             try {
-                fig1.setFill(Color.GREY);
-            } catch (Exception e) {
                 fig1.setFill(Color.GREENYELLOW);
+            } catch (Exception e) {
+                fig1.setFill(Color.GREY);
             }
 
             this.getChildren().add(fig1);
@@ -178,14 +177,66 @@ private void updateGears() {
     }
 }
 
+    private void updateCheckpoints() {
+        for (FieldAction action : space.actions) {
+            if (action instanceof Checkpoint) {
+
+                Rectangle fig2 = new Rectangle(50,50);
+
+                try {
+                    fig2.setFill(Color.TURQUOISE);
+                } catch (Exception e) {
+                    fig2.setFill(Color.MEDIUMORCHID);
+                }
+
+                this.getChildren().add(fig2);
+            }
+        }
+    }
+
     @Override
     public void updateView(Subject subject) {
         if (subject == this.space) {
             this.getChildren().clear();
-            updatePlayer();
+
             updateBelt();
             updateWalls();
-            updateGears();
+
+            for (FieldAction action : space.actions) {
+                if (action instanceof Gear) {
+                    addImage("images/gear" + ((Gear) action).rotation + ".png",-90);
+                }
+                if (action instanceof Checkpoint) {
+                    addImage("images/checkpoint" + ((Checkpoint) action).number + ".png", -90);
+                }
+            }
+            updatePlayer();
         }
+    }
+
+
+    private ImageView addImage(String name) {
+        Image img = null;
+        try {
+            img = new Image(SpaceView.class.getClassLoader().getResource(name).toURI().toString());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        ImageView imgView = new ImageView(img);
+        imgView.setImage(img);
+        imgView.setFitHeight(SPACE_HEIGHT);
+        imgView.setFitWidth(SPACE_WIDTH);
+        imgView.setVisible(true);
+
+        this.getChildren().add(imgView);
+
+        return imgView;
+    }
+
+    private ImageView addImage(String name, double rotation) {
+        ImageView imageView = addImage(name);
+        imageView.setRotate(rotation);
+
+        return imageView;
     }
 }

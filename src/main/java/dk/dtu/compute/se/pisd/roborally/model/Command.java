@@ -26,10 +26,14 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * ...
+ * This class is used to defined the cards.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- * @author Alexander Bak Heyde, s193576@student.dtu.dk
+ * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public enum Command {
 

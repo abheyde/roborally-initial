@@ -22,18 +22,24 @@
 package dk.dtu.compute.se.pisd.roborally.model;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
+import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import static dk.dtu.compute.se.pisd.roborally.model.Phase.INITIALISATION;
 
 /**
- * ...
+ * This class creates our board for our game
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
+ * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public class Board extends Subject {
 
@@ -41,7 +47,7 @@ public class Board extends Subject {
 
     public final int height;
 
-    public final String boardName;
+    public String boardName;
 
     private Integer gameId;
 
@@ -57,6 +63,12 @@ public class Board extends Subject {
 
     private boolean stepMode;
 
+    public int checkpoints;
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
     public Board(int width, int height, @NotNull String boardName) {
         this.boardName = boardName;
         this.width = width;
@@ -69,6 +81,7 @@ public class Board extends Subject {
             }
         }
         this.stepMode = false;
+        this.checkpoints = 0;
     }
 
     public Board(int width, int height) {
@@ -252,5 +265,8 @@ public class Board extends Subject {
             this.userChoice = userChoice;
             notifyChange();
         }
+    }
+    public int getCheckpoints() {
+        return checkpoints;
     }
 }

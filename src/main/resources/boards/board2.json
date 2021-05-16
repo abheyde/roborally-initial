@@ -16,6 +16,19 @@
       "y": 0
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "LEFT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 1
+    },
+    {
       "walls": [
         "SOUTH"
       ],
@@ -165,6 +178,19 @@
       "y": 2
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "RIGHT"
+          }
+        }
+      ],
+      "x": 0,
+      "y": 3
+    },
+    {
       "walls": [
         "NORTH"
       ],
@@ -210,6 +236,32 @@
       "y": 3
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
+          "INSTANCE": {
+            "number": 1
+          }
+        }
+      ],
+      "x": 12,
+      "y": 3
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "LEFT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 4
+    },
+    {
       "walls": [
         "EAST"
       ],
@@ -244,6 +296,19 @@
       "y": 4
     },
     {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "RIGHT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 5
+    },
+    {
       "walls": [
         "EAST"
       ],
@@ -281,6 +346,19 @@
       "walls": [],
       "actions": [
         {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "LEFT"
+          }
+        }
+      ],
+      "x": 0,
+      "y": 6
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
           "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt",
           "INSTANCE": {
             "heading": "SOUTH"
@@ -288,6 +366,19 @@
         }
       ],
       "x": 4,
+      "y": 6
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Checkpoint",
+          "INSTANCE": {
+            "number": 2
+          }
+        }
+      ],
+      "x": 5,
       "y": 6
     },
     {
@@ -342,6 +433,19 @@
       ],
       "x": 4,
       "y": 7
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.model.Gear",
+          "INSTANCE": {
+            "rotation": "RIGHT"
+          }
+        }
+      ],
+      "x": 1,
+      "y": 8
     },
     {
       "walls": [],

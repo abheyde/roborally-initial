@@ -21,19 +21,33 @@
  */
 package dk.dtu.compute.se.pisd.roborally.controller;
 
+import dk.dtu.compute.se.pisd.roborally.RoboRally;
 import dk.dtu.compute.se.pisd.roborally.model.*;
+import dk.dtu.compute.se.pisd.roborally.view.RoboRallyMenuBar;
+import javafx.application.Platform;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import jdk.nashorn.internal.runtime.AllocationStrategy;
+import jdk.nashorn.internal.runtime.options.Option;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
+
 /**
- * ...
+ * This class controls the game.
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  * @author Jens Lindegaard, s205343@student.dtu.dk
  * @author Alexander Bak Heyde, s193576@studnet.dut.dk
+ * @author Andreas Krone
+ * @author Andreas Borg
+ * @author Kim Randgaard
  */
 public class GameController {
 
     final public Board board;
+
+    public boolean winner = false;
 
     public GameController(@NotNull Board board) {
         this.board = board;
@@ -46,13 +60,13 @@ public class GameController {
 //     * @param space the space to which the current player should move
 //     */
 //    public void moveCurrentPlayerToSpace(@NotNull Space space)  {
-        // TODO Assignment V1: method should be implemented by the students:
-        //   - the current player should be moved to the given space
-        //     (if it is free()
-        //   - and the current player should be set to the player
-        //     following the current player
-        //   - the counter of moves in the game should be increased by one
-        //     if the player is moved
+    // TODO Assignment V1: method should be implemented by the students:
+    //   - the current player should be moved to the given space
+    //     (if it is free()
+    //   - and the current player should be set to the player
+    //     following the current player
+    //   - the counter of moves in the game should be increased by one
+    //     if the player is moved
 //
 //        Player current = board.getCurrentPlayer();
 //
@@ -171,35 +185,43 @@ public class GameController {
                         executeCommand(currentPlayer, command);
                     }
                 }
-                    int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
-                    if (nextPlayerNumber < board.getPlayersNumber()) {
-                        board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
-                    } else {
-                        step++;
-                        if (step < Player.NO_REGISTERS) {
-                            makeProgramFieldsVisible(step);
-                            board.setStep(step);
-                            board.setCurrentPlayer(board.getPlayer(0));
-                        } else {
-                            startProgrammingPhase();
+                int nextPlayerNumber = board.getPlayerNumber(currentPlayer) + 1;
+                if (nextPlayerNumber < board.getPlayersNumber()) {
+                    board.setCurrentPlayer(board.getPlayer(nextPlayerNumber));
+                } else {
+                    for (Player player : board.getPlayers()) {
+                        for (FieldAction action : player.getSpace().getActions()) {
+                            action.doAction(this, player.getSpace());
                         }
+                        if (winner)
+                            break;
                     }
-                } else{
-                    // this should not happen
-                    assert false;
+
+                    step++;
+                    if (step < Player.NO_REGISTERS) {
+                        makeProgramFieldsVisible(step);
+                        board.setStep(step);
+                        board.setCurrentPlayer(board.getPlayer(0));
+                    } else {
+                        startProgrammingPhase();
+                    }
                 }
             } else {
                 // this should not happen
                 assert false;
             }
+        } else {
+            // this should not happen
+            assert false;
         }
+    }
 
-public void executeCommandOptionAndContinue(@NotNull Command option) {
+    public void executeCommandOptionAndContinue(@NotNull Command option) {
         assert board.getPhase() == Phase.PLAYER_INTERACTION;
         assert board.getCurrentPlayer() != null;
         board.setUserChoice(option);
         continuePrograms();
-}
+    }
 
     private void executeCommand(@NotNull Player player, Command command) {
         if (player != null && player.board == board && command != null) {
@@ -256,8 +278,8 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void fastForward(@NotNull Player player) {
-         moveForward(player);
-         moveForward(player);
+        moveForward(player);
+        moveForward(player);
     }
 
     // Assignment A3
@@ -281,7 +303,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void turnRight(@NotNull Player player) {
-        if (player != null && player.board == board){
+        if (player != null && player.board == board) {
             player.setHeading(player.getHeading().next());
         }
 
@@ -289,7 +311,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
     // TODO Assignment V2
     public void turnLeft(@NotNull Player player) {
-        if (player != null && player.board == board){
+        if (player != null && player.board == board) {
             player.setHeading(player.getHeading().prev());
         }
 
@@ -329,6 +351,7 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
         }
         player.setSpace(space);
     }
+
     // Assignment A3
     class ImpossibleMoveException extends Exception {
 
@@ -344,6 +367,20 @@ public void executeCommandOptionAndContinue(@NotNull Command option) {
 
             // Checks if the move is possible
         }
+    }
+
+    /**
+     * This method is used to determine who won the game.
+     * @param player
+     */
+
+    public void playerWon(Player player) {
+        Alert winning = new Alert(Alert.AlertType.CONFIRMATION);
+        winning.setTitle("WINNER WINNER CHICKEN DINNER!");
+        String string = ("PLAYER " + player.getColor() + " YOU ARE A REAL ROBOKING!");
+        winning.setContentText(string);
+        this.winner = true;
+        winning.showAndWait();
     }
 
     /**

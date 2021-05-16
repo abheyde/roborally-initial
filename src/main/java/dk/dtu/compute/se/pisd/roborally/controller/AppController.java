@@ -48,7 +48,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * ...
+ * This class controllers the App, for newGame, saveGame, loadGame, stopGame and exit
  *
  * @author Ekkart Kindler, ekki@dtu.dk
  */
@@ -102,6 +102,7 @@ public class AppController implements Observer {
             if (BoardSelect == "board1") {
                 Board board = LoadBoard.loadBoard("board1");
                 gameController = new GameController(board);
+                gameController.board.boardName = BoardSelect;
                 int no = result.get();
                 for (int i = 0; i < no; i++) {
                     Player player = new Player(board, PLAYER_COLORS.get(i), "Player " + (i + 1));
@@ -111,6 +112,7 @@ public class AppController implements Observer {
             } else if (BoardSelect == "board2"){
                 Board board1 = LoadBoard.loadBoard("board2");
                 gameController = new GameController(board1);
+                gameController.board.boardName = BoardSelect;
                 int no1 = result.get();
                 for (int i = 0; i < no1; i++) {
                     Player player = new Player(board1, PLAYER_COLORS.get(i), "Player " + (i + 1));
@@ -120,6 +122,7 @@ public class AppController implements Observer {
             } else {
                 Board board2 = LoadBoard.loadBoard("defaultboard");
                 gameController = new GameController(board2);
+                gameController.board.boardName = BoardSelect;
                 int no1 = result.get();
                 for (int i = 0; i < no1; i++) {
                     Player player = new Player(board2, PLAYER_COLORS.get(i), "Player " + (i + 1));
